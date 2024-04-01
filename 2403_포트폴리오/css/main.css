@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* 메인 CSS - main.css */
+
+@import url(./core.css);
+
+
+* {
+  outline: 1px dotted orange;
+}
+
+body{
+height: 3000px;
+
+}
+
+
+:root {
+  --nav-width: 25rem;
+  --height:100vh;
+}
+
+
+/* .fixed-box{
+  padding: 0;
+  margin: 0;
+  position: fixed;
+
+  width: 100%;
+  height: 100vh;
+
+  border: 1px solid #000;
+  border-radius: 24px;
+
+  background-color: rgba(197, 197, 197, 0.233);
+
+}
+ */
+
+
+
+
+ 
+#header, #main{
+  padding: 48px;
+}
+
+
+#main{
+  position: relative;
+
+}
+
+section{
+  max-width: 60vw;
+  height: var(--height);
+  padding-left: var(--nav-width);;
+
+}
+
+
+
+/* 헤더 (네비게이션) */
+#header{
+  position: fixed;
+
+  height: var(--height);
+  float: left;
+  box-sizing: border-box;
+}
+
+
+
+#header::after, 
+.header__info::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+
+/* 헤더 공통 적용 */
+.header__info,
+.header__nav{
+  padding: 24px;
+  box-sizing: border-box;
+  
+  border: 1px solid #000;
+  border-radius: 24px;
+}
+
+
+/* 메뉴 기본 정보 */
+.header__info{
+  width: var(--nav-width);
+  height: 240px;
+
+  float: left;
+
+}
+
+
+/* 메뉴 네비게이션 */
+.header__nav{
+
+  height: 100%;
+  width: var(--nav-width);
+  padding-top: calc(240px + 24px) ;
+
+}
+
+
+
+/* 메뉴 네비게이션 */
+
+#intro{
+  
+}
