@@ -5,9 +5,11 @@
 
 
 
+
 /* html (ROOT) 의 글자크기설정(rem,em,% 상대단위의 기준) */
 html{
   font-size: 8px;
+  color: #333132;
 }
 
 
@@ -34,6 +36,8 @@ a{
 img {
   border: none;
   /* 이미지 링크시 테두리없앰 */
+  vertical-align : bottom
+  /* 공백없앰 */
 }
 
 

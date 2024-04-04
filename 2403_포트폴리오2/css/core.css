@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+
+
+
+:root {
+  --black: #333132;
+  --font-bold: 'TTLaundryGothicB';
+  --stroke: 4px solid var(--black);
+}
+
+
+body{
+  cursor: url("../images/cursor.png"), auto;
+  position:absolute;
+  width:100%;
+  height:100%;
+  }
+
+a:hover {
+  cursor: url("../images/cursor_hover.png"), auto;
+
+ }
+
+
+/* 런드리 얇음*/
+@font-face {
+  font-family: 'TTLaundryGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 런드리 볼드*/
+@font-face {
+  font-family: 'TTLaundryGothicB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+
+
+/* 프리텐다드 - url : "Pretendard Variable" */
+@font-face {
+  font-family: 'Pretendard';
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+}
