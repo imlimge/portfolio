@@ -23,7 +23,7 @@ body{
 
 #header{
   position: relative;
-  font-family: var(--font-bold);
+  font-family: var(--font-title-bold);
   background-color: #fff;
   border-radius: 2px 2px 0 0;
 
@@ -32,12 +32,13 @@ body{
 
 
 #main{
-  height: 30vh;
   position: absolute;
   top: 0;
   width: -webkit-fill-available;
   height: -webkit-fill-available;
   border-radius: 2px;
+
+  overflow: hidden;
 }
 
 
@@ -82,9 +83,14 @@ body{
 
 
 .header__title{
-  font-size: 3rem;
+  position: relative;
+  font-size: 2.4rem;
   margin-left: 2.4rem;
+  margin-top: 1.2rem;
+
 }
+
+
 
 
 .header__nav{
@@ -96,11 +102,81 @@ body{
   align-items: center;
 }
 
+.header__nav:hover {
+  cursor: url("../images/cursor_hover.png"), auto;
+}
+
+
+
+.header__nav-menu {
+  position: absolute;
+ 
+  height: 0;
+  overflow: hidden; /* 초기에는 내용이 보이지 않도록 함 */
+ 
+  background-color: #fff;
+  width: 100%;
+  top: 4rem;
+
+  border-radius: 2px;
+  border-top: var(--stroke-half);
+  transition: height .4s ease-in;
+  border-bottom: var(--stroke-half);
+}
+
+
+
+.header__nav-menu.on {
+  border-bottom: var(--stroke-half);
+
+}
 
 
 
 
 
+
+ .menu-list{
+  padding: 9rem 4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  
+ }
+
+ .menu-list a{
+  display: inline-block;
+ }
+ 
+ .menu-list>li{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--stroke);
+ }
+
+
+.menu-list__item{
+  
+}
+
+.menu-list__item span{
+  font-family: 'Pretendard';
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+ .sub-list{
+  font-size: 1.5rem;
+  display: flex;
+ }
+
+ .sub-list li{
+  margin-left: 2rem;
+ }
 
 
 #intro{
@@ -117,7 +193,17 @@ body{
 
 .intro__img{
   border-right: var(--stroke);
-  flex: 1.8;
+  flex: 1.5;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro__img img{
+  max-height: 80%;
+  max-width: 80%;
+  margin-top: 5rem;
 }
 
 .intro__content{
@@ -129,10 +215,47 @@ body{
 
 
 .intro__content-me{
+  padding: 7rem 2rem 2rem 2rem;
   border-bottom: var(--stroke);
-  flex: 1;
+
 }
 
+.intro__content-me h4{
+  font-family: var(--font-title-bold);
+  font-size: 2rem;
+  margin-bottom: 4px;
+  font-weight: bold;
+  }
+  
+  
+  .intro__content-me h2{
+    font-family: var(--font-title-bold);
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  
+  .intro__content-me div{
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: var(--black);
+    color: #fff;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+   }
+  
+  .intro__content-me span{
+   margin-bottom: 1rem;
+   display: inline-block;
+   font-size: 1.3rem;
+  }
+
 .intro__content-hello{
+  padding: 2rem;
+  font-size: min(3vw, 2rem);
+  line-height: 3rem;
+  background-color: var(--black);
+  color: white;
   flex: 1;
 }
