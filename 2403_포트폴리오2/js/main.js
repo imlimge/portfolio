@@ -66,9 +66,12 @@ $(window).on("resize", function() {
     let resizeTimer;
     $(this).on("resize", function() {
       clearTimeout(resizeTimer);
+      console.log('resize1')
       resizeTimer = setTimeout(function() {
         $(".header__nav-menu.on").css('transition', 'height 0.4s ease-in-out');
+        console.log('resize2')
       }, 250);
+      
     });
   }
 });
