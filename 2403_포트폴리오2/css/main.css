@@ -189,6 +189,7 @@ body{
   top: 0;
  }
 
+ 
 #intro{
   /* position: absolute;
   width: 100%;
@@ -278,7 +279,7 @@ body{
 
 
 #about{
-  position: relative;
+  position: absolute;
   /* 임시 배경색 */
   background-color: #fff;
 
@@ -331,7 +332,7 @@ font-size: 1.2rem;
   margin: 0 4px 4px 0;
 }
 
-.about__item-contentent{
+.about__item-content{
   display: flex;
   flex-wrap: wrap;
   width: fit-content;
@@ -389,37 +390,34 @@ font-size: 1.3rem;
 
 
 #portfolio{
-  position: relative;
+  position: absolute;
   /* 임시 배경색 */
   background-color: #fff;
+  /* display: none; */
+ 
 }
 
 .portfolio{
-  display: flex;
-  flex-direction: row;
+
   height: 100%;
-}
-
-.portfolio__menu{
-  border-right: var(--stroke);
-  flex: .7;
   padding: 7rem 2rem;
+  overflow: auto;
+  box-sizing: border-box;
 }
-
-.portfolio__content{
-  flex: 3;
-}
-
-.portfolio__menu h3, .portfolio__content h3{
+.portfolio h3{
   font-size: 2rem;
 font-family: var(--font-title-bold);
 display: inline-block;
 }
 
 
-.portfolio__menu span,.portfolio__content span{
+.portfolio span{
   font-size: 1.2rem;
   }
+.portfolio__menu{
+
+}
+
 
 
   .pmenu__box{
@@ -449,20 +447,58 @@ display: inline-block;
     margin: 4px 6px;
   }
 
-  .pmenu-list__item.on {
+  .pmenu-list__item:hover {
     border-bottom: 1px solid var(--black);
   }
 
 
 
   .portfolio__content{
+
     display: flex;
-    align-items: center;
-    padding: 7rem 2rem;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
   }
 
   .portfolio__item{
-    background-color: #e0e0e0;
+    margin: 3rem;
+
+    height: 400px;
+
+    position: relative;
+    perspective: 700px;
+
+  }
+
+
+  .portfolio__content a:nth-child(2){
+    margin-top: -370px;
+  }
+
+
+  .portfolio__item .inner{
+    width: 100%;
+    height: 530px;
+    padding: 70px 60px;
+    color: #00ff04;
+    box-shadow: 0 -15px 32px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    background: #222;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg) translateZ(-5px);
+    transition: color 0.6s, background 0.6s, transform 0.6s ease;
+    border-radius: 23px;
+
+  }
+
+
+
+
+
+  .portfolio__item:hover{
+
+
   }
 
   .pitem__img{
@@ -479,4 +515,9 @@ display: inline-block;
   .pitem__title h4{
     padding: 4px 0;
     font-size: 1.5rem;
+  }
+
+
+  .portfolio__content-more{
+    display: none;
   }
