@@ -55,6 +55,8 @@ body{
   padding: 1rem;
   box-sizing: border-box;
   align-items: center;;
+
+  overflow: hidden;
 }
 
 
@@ -278,7 +280,7 @@ body{
 #about{
   position: relative;
   /* 임시 배경색 */
-  background-color: rgb(255, 246, 120);
+  background-color: #fff;
 
   display: flex;
   flex-direction: row;
@@ -350,4 +352,26 @@ border-radius: 4px;
 
 .about__item-name span{
   font-size: 1rem;
+}
+
+.about__item-cont.stxt span:nth-child(2){
+  font-size: .9rem;
+  color: #888;
+}
+
+.item-cont__title{
+  border-bottom: 2px solid var(--black);
+}
+
+.item-cont__title span{
+font-size: 1.5rem;
+}
+
+.item-cont__text{
+  padding: 4PX;
+}
+.item-cont__text span{
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
