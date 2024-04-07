@@ -9,6 +9,13 @@ element의 경우에는  blcok 뒤에 __ (double underscore)으로 연결합니�
 modifier의 경우에는 element 뒤에 -- 으로 연결합니다. (--visible)
 
 
+h2 - 메인 내이름 / 큰 제목 - 4rem
+h3 - 각 섹션 타이틀 - 2rem
+h4 - 메인 내이름 부제 / 보조 큰 글씨 - 1.5rem
+h5 - 네비 큰 글씨 / 보조 중간 글씨 -1.3rem
+
+
+
 
 <!-- 헤더(네비게이션) -->
 <header>

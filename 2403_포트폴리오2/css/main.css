@@ -285,6 +285,7 @@ body{
   display: flex;
   flex-direction: row;
 
+  display: none;
 }
 
 
@@ -292,8 +293,12 @@ body{
   flex: 1;
   padding: 7rem 2rem;
 }
+.about-skill{
+  flex: 2;
 
-.about-me h4,.about-skill h4{
+}
+
+.about-me h3,.about-skill h3{
 font-size: 2rem;
 font-family: var(--font-title-bold);
 display: inline-block;
@@ -310,7 +315,7 @@ font-size: 1.2rem;
 }
 
 .about-skill{
- 
+  overflow: auto;
 }
 
 .about__item__box{
@@ -326,8 +331,9 @@ font-size: 1.2rem;
   margin: 0 4px 4px 0;
 }
 
-.about__item-cont{
-  display: inline-block;
+.about__item-contentent{
+  display: flex;
+  flex-wrap: wrap;
   width: fit-content;
   padding: 4px;
   background-color: #fff;
@@ -336,7 +342,7 @@ font-size: 1.2rem;
   margin-bottom: 2px;
 }
 
-.about__item-cont span{
+.about__item-content span{
   font-size: 1.3rem;
   font-weight: 900;
 }
@@ -354,24 +360,123 @@ border-radius: 4px;
   font-size: 1rem;
 }
 
-.about__item-cont.stxt span:nth-child(2){
+.about__item-content.stxt span:nth-child(2){
   font-size: .9rem;
   color: #888;
 }
 
-.item-cont__title{
-  border-bottom: 2px solid var(--black);
+.item-content__box{
+  max-width: 200px;
+  padding: 4px;
 }
 
-.item-cont__title span{
-font-size: 1.5rem;
+.item-content__title{
+  
 }
 
-.item-cont__text{
-  padding: 4PX;
+.item-content__title span{
+font-size: 1.3rem;
 }
-.item-cont__text span{
+
+.item-content__text{
+  padding: 4px 6px;
+}
+.item-content__text span{
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 2rem;
 }
+
+
+#portfolio{
+  position: relative;
+  /* 임시 배경색 */
+  background-color: #fff;
+}
+
+.portfolio{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.portfolio__menu{
+  border-right: var(--stroke);
+  flex: .7;
+  padding: 7rem 2rem;
+}
+
+.portfolio__content{
+  flex: 3;
+}
+
+.portfolio__menu h3, .portfolio__content h3{
+  font-size: 2rem;
+font-family: var(--font-title-bold);
+display: inline-block;
+}
+
+
+.portfolio__menu span,.portfolio__content span{
+  font-size: 1.2rem;
+  }
+
+
+  .pmenu__box{
+    margin: 3rem 0;
+  }
+
+  .pmenu__title{
+    background-color: var(--black);
+    display: inline-block;
+    padding: 4px;
+    border-radius: 4px;
+    line-height: 1rem;
+
+  }
+  .pmenu__title h5 a{
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+
+  .pmenu-list{
+    margin-bottom: 3rem;
+  }
+
+  .pmenu-list__item{
+    width: fit-content;
+    margin: 4px 6px;
+  }
+
+  .pmenu-list__item.on {
+    border-bottom: 1px solid var(--black);
+  }
+
+
+
+  .portfolio__content{
+    display: flex;
+    align-items: center;
+    padding: 7rem 2rem;
+  }
+
+  .portfolio__item{
+    background-color: #e0e0e0;
+  }
+
+  .pitem__img{
+    width: 100px;
+    height: 100px;
+    background-color: #888;
+
+  }
+
+  .pitem__title{
+    padding: 4px 0;
+  }
+
+  .pitem__title h4{
+    padding: 4px 0;
+    font-size: 1.5rem;
+  }
