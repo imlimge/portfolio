@@ -1,0 +1,175 @@
+
+#header, #main{
+  margin: 48px;
+  outline: var(--stroke);
+}
+
+
+#header{
+  position: relative;
+  font-family: var(--font-title-bold);
+  background-color: #fff;
+  border-radius: 2px 2px 0 0;
+
+  z-index: 999;
+}
+
+
+#main{
+  position: absolute;
+  top: 0;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  border-radius: 2px;
+
+  overflow: hidden;
+}
+
+
+.header__wrap{
+  display: flex;
+}
+
+
+
+.header__info{
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  align-items: center;;
+
+  overflow: hidden;
+}
+
+
+.header__logo img{
+  position: relative;
+  max-width: 11rem;
+}
+
+.header__logo{
+  position: relative;
+  display: inline-block;
+}
+
+.header__logo::after{
+  content: '';
+  background-image: url(../../public/images/logo2.png);
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  top: -1px;
+
+}
+
+
+.header__title{
+  position: relative;
+  font-size: 2.4rem;
+  margin-left: 2.4rem;
+  margin-top: 1.2rem;
+
+}
+
+
+
+
+.header__nav{
+  width: 5rem;
+  border-left: var(--stroke);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__nav:hover {
+  cursor: url("../../public/images/cursor_hover.png"), auto;
+}
+
+
+
+.header__nav-menu {
+  position: absolute;
+ 
+  height: 0;
+  overflow: hidden; /* 초기에는 내용이 보이지 않도록 함 */
+ 
+  background-color: #fff;
+  width: 100%;
+  top: 4rem;
+
+  border-radius: 2px;
+  border-top: var(--stroke-half);
+  transition: height .4s ease-in;
+  border-bottom: var(--stroke-half);
+}
+
+
+
+.header__nav-menu.on {
+  border-bottom: var(--stroke-half);
+
+}
+
+
+
+
+
+
+ .menu-list{
+  padding: 9rem 4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  
+ }
+
+ .menu-list a{
+  display: inline-block;
+ }
+ 
+ .menu-list>li{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--stroke);
+ }
+
+
+.menu-list__item{
+  
+}
+
+.menu-list__item span{
+  font-family: 'Pretendard';
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+ .sub-list{
+  font-size: 1.5rem;
+  display: flex;
+ }
+
+ .sub-list li{
+  margin-left: 2rem;
+ }
+
+
+
+
+ section{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+ }

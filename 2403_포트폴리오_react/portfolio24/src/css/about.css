@@ -1,0 +1,110 @@
+
+#about{
+  position: absolute;
+  /* 임시 배경색 */
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: row;
+
+ 
+}
+
+
+.about-me,.about-skill{
+  flex: 1;
+  padding: 7rem 2rem;
+}
+.about-skill{
+  flex: 2;
+
+}
+
+.about-me h3,.about-skill h3{
+font-size: 2rem;
+font-family: var(--font-title-bold);
+display: inline-block;
+}
+
+.about-me span,.about-skill span{
+font-size: 1.2rem;
+}
+
+
+.about-me{
+  border-right: var(--stroke);
+  overflow: auto;
+}
+
+.about-skill{
+  overflow: auto;
+}
+
+.about__item__box{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.about__item{
+  display: flex;
+  flex-direction: column;
+  margin: 0 4px 4px 0;
+}
+
+.about__item-content{
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  padding: 4px;
+  background-color: #fff;
+  border: 2px solid var(--black);
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
+.about__item-content span{
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.about__item-name{
+display: inline-block;
+width: fit-content;
+padding: 2px;
+background-color: var(--black);
+color: #fff;
+border-radius: 4px;
+}
+
+.about__item-name span{
+  font-size: 1rem;
+}
+
+.about__item-content.stxt span:nth-child(2){
+  font-size: .9rem;
+  color: #888;
+}
+
+.item-content__box{
+  max-width: 200px;
+  padding: 4px;
+}
+
+.item-content__title{
+  
+}
+
+.item-content__title span{
+font-size: 1.3rem;
+}
+
+.item-content__text{
+  padding: 4px 6px;
+}
+.item-content__text span{
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}

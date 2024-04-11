@@ -11,7 +11,16 @@ burger.each(function(index){
 });
 
 
-
+// 햄버거 메뉴의 각 항목을 클릭할 때 메뉴를 닫는 기능 추가
+$(".menu-list__item").on("click", function() {
+  // 햄버거 메뉴가 열려 있는 경우에만 동작
+  if ($(".header__nav-menu").hasClass("on")) {
+    // 햄버거 메뉴 닫기
+    $(".header__nav-menu").removeClass("on");
+    // 섹션 높이 초기화
+    $(".header__nav-menu").css("height", "0");
+  }
+});
 
 $(document).ready(function() {
   // 햄버거 메뉴 클릭 시 동작
