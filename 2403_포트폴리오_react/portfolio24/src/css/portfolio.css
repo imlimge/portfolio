@@ -46,6 +46,8 @@ display: inline-block;
   }
 
   
+
+  
   .portfolio__list a{
     /* position: absolute; */
     position: relative;
@@ -54,6 +56,26 @@ display: inline-block;
     
   }
 
+
+.plist__title{
+  position: absolute;
+  bottom: -87px;
+  /* right: 0; */
+  width: 100%;
+  text-align: right;
+  border-bottom: 3px solid var(--black);
+
+}
+
+.plist__title.side{
+  border-bottom: 0;
+  border-top: 3px solid;
+  top: -10px;
+}
+
+.plist__title.side h3{
+  padding-top: 11px;
+}
 
   .portfolio__item{
     border-radius: 23px;

@@ -24,7 +24,7 @@
 
 .intro__img img{
   max-height: 80%;
-  max-width: 80%;
+  max-width: 55%;
   margin-top: 5rem;
 }
 
@@ -33,6 +33,7 @@
 
     display: flex;
     flex-direction: column;
+   
 
     overflow-y: auto;
 }
@@ -76,11 +77,97 @@
   }
 
 .intro__content-hello{
-  padding: 2rem;
-  font-size: min(3vw, 2rem);
-  line-height: 3rem;
+  height: 33px;
+    
   background-color: var(--black);
   color: white;
-  flex: 1;
+  
+
+
+  overflow: hidden;
+
 }
 
+.hello__item{
+  position: relative;
+  width: 1200px;
+  animation: scroll-animation 5s linear infinite;
+}
+
+.hello__item span{
+  float: left;
+  width: 400px;
+  font-size: 2rem;
+  color: #494949;
+
+  font-weight: 900;
+}
+
+
+.intro__content-text{
+ position: relative;
+ flex-grow: 1;
+}
+
+.intro__content-text p{
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  font-family: "Pretendard Variable";
+  top: -12px;
+  position: relative;
+}
+
+.text__item-list{
+   padding: 2rem;
+margin-bottom: 80px;
+}
+
+.text__item{
+  border: 2px solid var(--black);
+  margin: 8px 0;
+  padding: 8px 10px;
+  border-radius: 14px;
+  background-color: var(--black);
+  color: #fff;
+}
+
+
+.text__item::before {
+  content: "◀";
+  left: -18px;
+  color: var(--black);
+  position: relative;
+ 
+}
+
+
+.text__bottom{
+  height: 59px;
+  background-color: #e1e1e1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.white{
+  width: 85%;
+  height: 40px;
+  background-color: #fff;
+
+  border-radius: 8px;
+}
+
+.send{
+  width: 13%;
+  height: 40px;
+  background-color: #494949;
+  border-radius: 8px;
+  
+}

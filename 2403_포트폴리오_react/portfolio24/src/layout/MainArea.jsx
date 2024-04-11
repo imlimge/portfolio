@@ -1,7 +1,7 @@
 
 
-import { Link, Outlet } from "react-router-dom";
-import { useEffect } from "react";
+import { Link, Outlet,useParams,useNavigate } from "react-router-dom";
+import { useEffect} from "react";
 
 
 import $ from "jquery";
@@ -11,6 +11,8 @@ window.jQuery = $;
 
 
 export function MainArea({sts}) {
+
+    
 
 
 useEffect(()=>{
@@ -119,7 +121,9 @@ $(window).on("resize", function() {
                         </div>
                     </a>
                     <div className="header__title">
-                        <span>main</span>
+                        <Link to="/"><span>main</span></Link>
+                        <Link to="about"><span>,about</span></Link>
+                        <Link to="portfolio"><span>,portfolio</span></Link>
                     </div>
                 </div>
 
@@ -149,7 +153,7 @@ $(window).on("resize", function() {
                             </div>
                             <ul className="sub-list">
                                 <li>
-                                    <a href="#">내 소개 & 업무 스킬</a>
+                                   내 소개 & 업무 스킬
                                 </li>
                             </ul>
                         </li>
@@ -161,13 +165,13 @@ $(window).on("resize", function() {
                             </div>
                             <ul className="sub-list">
                                 <li>
-                                    <a href="#">웹 사이트</a>
+                                    웹 사이트
                                 </li>
                                 <li>
-                                    <a href="#">워드프레스</a>
+                                    워드프레스
                                 </li>
                                 <li>
-                                    <a href="#">디자인</a>
+                                    디자인
                                 </li>
                             </ul>
                         </li>

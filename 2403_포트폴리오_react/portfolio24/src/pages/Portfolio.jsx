@@ -21,6 +21,11 @@ export function Portfolio() {
                         {/* <!-- 포트폴리오 전체 내용 표시 --> */}
                         <div className="portfolio__list side">
 
+                        <div className="plist__title side">
+                             <h3>워드프레스 및 디자인</h3>
+                           </div>   
+                        
+
                             {/* <!-- 프로젝트 아이템 --> */}
                             <a href="">
                                 <div className="portfolio__item">
@@ -46,7 +51,7 @@ export function Portfolio() {
                                 <div className="portfolio__item">
                                     <div className="inner">
                                         <div className="pitem__title">
-                                        <h4>드로잉 및 디자인</h4>
+                                        <h4>디자인</h4>
                                         </div>
                                 
                                     <div className="pitem__skill">
@@ -61,8 +66,7 @@ export function Portfolio() {
                             </div>
                             </a>
                        
-
-                        
+                           
                     </div>
                     {/* <!-- portfolio__list --> */}
 
@@ -70,6 +74,9 @@ export function Portfolio() {
 
                     {/* <!-- 포트폴리오 전체 내용 표시 --> */}
                     <div className="portfolio__list">
+                      
+                     
+
 
                         {/* <!-- 프로젝트 아이템 --> */}
                         <a href="">
@@ -138,7 +145,10 @@ export function Portfolio() {
                         </div>
                         </a>
                         {/* <!-- portfolio__item --> */}
-                             
+
+                           <div className="plist__title">
+                             <h3>웹 개발</h3>
+                           </div>   
                     </div>
                     {/* <!-- portfolio__list --> */}
 
