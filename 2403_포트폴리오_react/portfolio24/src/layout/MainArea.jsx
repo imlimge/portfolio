@@ -121,9 +121,9 @@ $(window).on("resize", function() {
                         </div>
                     </a>
                     <div className="header__title">
-                        <Link to="/"><span>main</span></Link>
-                        <Link to="about"><span>,about</span></Link>
-                        <Link to="portfolio"><span>,portfolio</span></Link>
+                        <Link to="/"><span>main,</span></Link>
+                        <Link to="about"><span>about,</span></Link>
+                        <Link to="portfolio"><span>portfolio</span></Link>
                     </div>
                 </div>
 
