@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../css/portfolio.css";
 
 import $ from "jquery";
@@ -6,6 +7,28 @@ window.jQuery = $;
 
 
 export function Portfolio() {
+
+    useEffect(()=>{
+        // 포트폴리오 아이템을 클릭할 때
+        $(".portfolio__item").click(function() {
+            // 현재 클릭된 요소에 대해서만 .design 클래스를 확인합니다.
+            if($(this).hasClass('design')){
+                $(this).closest(".portfolio").find(".portfolio__content-more.design").show();
+                console.log('d');
+            } else {
+                $(this).closest(".portfolio__lists").next(".portfolio__content-more").show();
+                console.log('ww');
+            }
+        });
+    
+        // 창닫기 버튼을 클릭할 때
+        $(".close__btn").click(function() {
+            // 부모 요소인 .portfolio__content-more를 찾아서 숨깁니다.
+            $(this).parent(".portfolio__content").parent(".portfolio__content-more").hide();
+        });
+           
+    })
+   
 
 
   return (
@@ -19,6 +42,8 @@ export function Portfolio() {
 
                  
                         {/* <!-- 포트폴리오 전체 내용 표시 --> */}
+
+                        <div className="portfolio__lists">
                         <div className="portfolio__list side">
 
                         <div className="plist__title side">
@@ -27,7 +52,7 @@ export function Portfolio() {
                         
 
                             {/* <!-- 프로젝트 아이템 --> */}
-                            <a href="">
+                            
                                 <div className="portfolio__item">
                                     <div className="inner">
                                         <div className="pitem__title">
@@ -44,11 +69,11 @@ export function Portfolio() {
                                         </div>
                                 </div>
                             </div>
-                            </a>
+                            
                             {/* <!-- portfolio__item --> */}
                             {/* <!-- 프로젝트 아이템 --> */}
-                            <a href="">
-                                <div className="portfolio__item">
+                            
+                                <div className="portfolio__item design">
                                     <div className="inner">
                                         <div className="pitem__title">
                                         <h4>디자인</h4>
@@ -64,7 +89,7 @@ export function Portfolio() {
                                     </div>
                                 </div>
                             </div>
-                            </a>
+                            
                        
                            
                     </div>
@@ -79,7 +104,7 @@ export function Portfolio() {
 
 
                         {/* <!-- 프로젝트 아이템 --> */}
-                        <a href="">
+                        
                             <div className="portfolio__item">
                                 <div className="inner">
                                     <div className="pitem__title">
@@ -98,10 +123,10 @@ export function Portfolio() {
                                     </div>
                             </div>
                         </div>
-                        </a>
+                        
                         {/* <!-- portfolio__item --> */}
                         {/* <!-- 프로젝트 아이템 --> */}
-                        <a href="">
+                        
                             <div className="portfolio__item">
                                 <div className="inner">
                                     <div className="pitem__title">
@@ -120,11 +145,11 @@ export function Portfolio() {
                                 </div>
                             </div>
                         </div>
-                        </a>
+                        
                         {/* <!-- portfolio__item --> */}
                         
                         {/* <!-- 프로젝트 아이템 --> */}
-                        <a href="">
+                        
                             <div className="portfolio__item">
                                 <div className="inner">
                                     <div className="pitem__title">
@@ -143,7 +168,7 @@ export function Portfolio() {
                                 </div>
                             </div>
                         </div>
-                        </a>
+                        
                         {/* <!-- portfolio__item --> */}
 
                            <div className="plist__title">
@@ -152,9 +177,10 @@ export function Portfolio() {
                     </div>
                     {/* <!-- portfolio__list --> */}
 
-                        
+                    </div>   
+                    {/* <!-- portfolio__lists --> */}
 
-              
+
 
 
                     {/* <!-- 포트폴리오 개별 내용 새창 --> */}
@@ -164,24 +190,32 @@ export function Portfolio() {
                         {/* <!-- 포트폴리오 세부 내용 --> */}
                         <div className="portfolio__content">
                             {/* <!-- 창닫기 버튼 --> */}
-                            <button className="close_btn">×</button>
+                            <button className="close__btn">×</button>
                            
                             <div className="pcontent__box">
-                                <div className="pcontent__image">
-                                    <img src="" alt="" />
-                                </div>
-                                <div className="pcontent__title">
-                                    <h3>햄버거 사이트</h3>
-                                </div>
-                                <div className="pcontent__skill">
-                                    html, css, javascript, jquery
-                                </div>
-                                <div className="pcontent__text">
-                                    
-                                </div>
+                                <div className="image__box">
+                                    <div className="pcontent__image">
+                                      
+                                    </div>
+                                    <div className="pcontent__title">
+                                        <h3>햄버거 사이트</h3>
+                                    </div>
+                                    <button className="view__btn">
+                                        view Site
+                                    </button>
+                                </div>{/* image__box */}
 
-                            </div>
-                        </div>
+                                <div className="content__box">
+                                    <div className="pcontent__skill">
+                                        html, css, javascript, jquery
+                                    </div>
+                                    <div className="pcontent__text">
+                                        
+                                    </div>
+                                </div> {/* content__box */}
+                            </div>{/* pcontent__box */}
+
+                        </div> {/* portfolio__content */}
 
                         {/* <!-- 포트폴리오 메뉴 --> */}
                         <div className="portfolio__menu">
@@ -220,12 +254,25 @@ export function Portfolio() {
                         {/* <!-- portfolio__menu --> */}
 
 
-                          .  
+
+                    </div>{/* portfolio__content-more */}
+
+
+                    {/* <!-- 포트폴리오 개별 내용 새창 --> */}
+                    <div className="portfolio__content-more design">
+                    <h1>ddddd</h1>
+                            {/* <!-- 포트폴리오 세부 내용 --> */}
+                            <div className="portfolio__content">
+                            {/* <!-- 창닫기 버튼 --> */}
+                            <button className="close_btn">×</button>
+                           </div>
 
                     </div>
 
 
-                </div>
+
+
+                </div>{/* portfolio */}
 
             </section>
 

@@ -48,7 +48,7 @@ display: inline-block;
   
 
   
-  .portfolio__list a{
+  .portfolio__item{
     /* position: absolute; */
     position: relative;
     width: 25vw;
@@ -77,7 +77,7 @@ display: inline-block;
   padding-top: 11px;
 }
 
-  .portfolio__item{
+  .portfolio__item .inner{
     border-radius: 23px;
     border: 3px solid var(--black);
     background-color: #fff;
@@ -89,16 +89,17 @@ display: inline-block;
 
   
 
-  .portfolio__list a:hover{
+  .portfolio__item:hover{
     transform: translateX(-10px) translateY(20px);
     transition: transform .2s ease-in-out;
-
+    cursor: url("../../public/images/cursor_hover.png"), auto;
   }
-  .portfolio__list a:hover .portfolio__item{
+  .portfolio__item:hover .inner{
    background-color: var(--black);
    transition: background-color .2s ease-in-out;
+   color: #888;
   }
-  .portfolio__list a:hover .view-more{
+  .portfolio__item:hover .view-more{
    opacity: 1;;
    transition: opacity .2s ease-in-out;
   }
@@ -113,10 +114,7 @@ display: inline-block;
 
 
 
-.inner{
 
-
-}
 .pitem__img,.pitem__skill,.pitem__txt{
  /* margin-top: 25px; */
 }   
@@ -173,10 +171,14 @@ display: inline-block;
     top: 70px;
     border-radius: 8px;
     border: 3px solid var(--black);
-    box-shadow: 2px 3px 7px var(--black);
+    box-shadow: 0px 0px 200px #000;
     left: 0;
     right: 0;
     margin: 0 auto;
+
+    z-index: 999;
+
+    /* display: none; */
   }
 
 
@@ -196,15 +198,16 @@ display: inline-block;
 
 
   /* 닫기버튼 */
-  button.close_btn{
+  button.close__btn{
 background-color: var(--black);
 border-style: none;
 border-radius: 2px;
 color: #fff;
+box-shadow: 2px 2px 8px #000;
 
   }
 
-  .close_btn{
+  .close__btn{
     position: fixed;
   /*   right: 0; */
     margin: 4px;
@@ -212,8 +215,12 @@ color: #fff;
     height: 40px;
     font-size: 3rem;
     line-height: 3.3rem;
+    z-index: 3;
+    transition: .1s ease-in-out;
   }
-
+  .close__btn:hover{
+    transform: scale(1.01);
+  }
   
 /*   .close_btn{
     position: fixed;
@@ -236,11 +243,60 @@ color: #fff;
     height: 1000px;
   }
 
-  .pcontent__image{
+  .image__box{
     width: 100%;
-    height: 200px;
-    background-color: #888;
+    height: 330px;
+ 
     border-radius: 0 0 0 8px;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  .pcontent__image{
+  background-image: url(../../public/images/portfolio/site_01/main.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  filter: brightness(0.3);
+
+  }
+
+  .pcontent__title{
+    position: absolute;
+    
+  }
+
+  .pcontent__title h3{
+    font-size: 5rem;
+    margin-left: 1rem;
+    color: #fff;
+  }
+
+  .view__btn{
+    position: absolute;
+    bottom: 70px;
+
+    margin: 1rem;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 20px;
+    width: 123px;
+    height: 38px;
+    font-size: 1.7rem;
+    transition: border .2s ease-in-out;
+  }
+
+  .view__btn:hover{
+    border: 6px solid #fff;
+
 
   }
 
@@ -284,3 +340,7 @@ color: #fff;
 
 
 
+  .portfolio__content-more.design{
+
+    display: none;
+  }

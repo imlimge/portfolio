@@ -72,6 +72,12 @@ $(".menu-list__item").on("click", function() {
 
 
 
+  const spans = document.querySelectorAll('.header__title span');
+  spans.forEach(span => {
+    const width = span.offsetWidth; 
+    span.style.setProperty('--span-width', `${width}px`); 
+  });
+  
 
 })
 

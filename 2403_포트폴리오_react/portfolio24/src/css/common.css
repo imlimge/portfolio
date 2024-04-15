@@ -78,6 +78,33 @@
 
 .header__title span{
 margin-right: 8px;
+
+display: inline-block;
+position: relative;
+
+}
+
+.header__title span::before{
+  content: '';
+  background-color: yellow;
+
+  position: absolute;
+  height: 90%;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 0.2s ease-in-out;
+}
+
+
+.header__title span:hover {
+
+
+}
+
+.header__title span:hover::before{
+  width: calc(var(--span-width));
 }
 
 
