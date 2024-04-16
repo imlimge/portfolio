@@ -173,6 +173,7 @@
   border: none;
   font-size: 1.4rem;
   padding-left: 8px;
+  margin-right: 8px;
 }
 
 input:focus {outline:none;}

@@ -201,16 +201,53 @@ export function Portfolio() {
                                         <h3>햄버거 사이트</h3>
                                     </div>
                                     <button className="view__btn">
-                                        view Site
+                                        <a href="https://imlimge.github.io/LKE-burger/">view Site</a>
                                     </button>
                                 </div>{/* image__box */}
 
                                 <div className="content__box">
                                     <div className="pcontent__skill">
-                                        html, css, javascript, jquery
+                                        <h3>사용 기술</h3>
+                                        
+                                            <span>html</span>
+                                            <span>css</span>
+                                            <span>javascript</span>
+                                            <span>jquery</span>
+                                        
                                     </div>
                                     <div className="pcontent__text">
-                                        
+                                        <h3>제작 의도</h3> 
+                                        <span>사이트 구현하기</span>
+                                        <p>- 버거킹 사이트를 직접 구현해보며 html,css,javascript,jquery 사용법을 배움</p>
+                                        <p>- 버거킹 사이트를 직접 구현해보며 html,css,javascript,jquery 사용법을 배움</p>
+
+                                        <div className="point__box">
+                                            <h3>작업 포인트</h3> 
+                                            <div className="point__list">
+                                            <div className="point__item">
+                                                <h4>포인트.01</h4>
+                                                <img src="" alt="" />
+                                                <p>이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.</p>
+                                            </div>
+                                            <div className="point__item">
+                                                <h4>포인트.02</h4>
+                                                <img src="" alt="" />
+                                                <p>이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.</p>
+                                            </div>
+                                            <div className="point__item">
+                                                <h4>포인트.03</h4>
+                                                <img src="" alt="" />
+                                                <p>이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.</p>
+                                            </div>
+                                            <div className="point__item">
+                                                <h4>포인트.04</h4>
+                                                <img src="" alt="" />
+                                                <p>이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.이건 이렇게 해서 그렇게 했습니다.</p>
+                                            </div>
+                                            </div>{/* point__list */}
+                                        </div>{/* point__box */}
+
+
                                     </div>
                                 </div> {/* content__box */}
                             </div>{/* pcontent__box */}
@@ -264,7 +301,7 @@ export function Portfolio() {
                             {/* <!-- 포트폴리오 세부 내용 --> */}
                             <div className="portfolio__content">
                             {/* <!-- 창닫기 버튼 --> */}
-                            <button className="close_btn">×</button>
+                            <button className="close__btn">×</button>
                            </div>
 
                     </div>
