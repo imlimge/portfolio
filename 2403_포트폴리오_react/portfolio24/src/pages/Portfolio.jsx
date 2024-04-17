@@ -207,19 +207,31 @@ export function Portfolio() {
 
                                 <div className="content__box">
                                     <div className="pcontent__skill">
-                                        <h3>사용 기술</h3>
+                                        <div className="skill__item">
+                                            <h3>사용 기술</h3>
+                                                <span>html</span>
+                                                <span>css</span>
+                                                <span>javascript</span>
+                                                <span>jquery</span>
+                                           </div>
+                                           <div className="skill__item">
+                                                <h3>제작 기간</h3> 
+                                                <span>23.07 ~ 23.09</span>
+                                            </div>
+                                            <div className="skill__item">
+                                                <h3>기여도</h3> 
+                                                <span>100%</span>
+                                            </div>
                                         
-                                            <span>html</span>
-                                            <span>css</span>
-                                            <span>javascript</span>
-                                            <span>jquery</span>
-                                        
-                                    </div>
+                                    </div> {/* pcontent__skill */}
+
                                     <div className="pcontent__text">
                                         <h3>제작 의도</h3> 
-                                        <span>사이트 구현하기</span>
+                                        <span>: 사이트 구현</span>
                                         <p>- 버거킹 사이트를 직접 구현해보며 html,css,javascript,jquery 사용법을 배움</p>
                                         <p>- 버거킹 사이트를 직접 구현해보며 html,css,javascript,jquery 사용법을 배움</p>
+                                       
+                                   
 
                                         <div className="point__box">
                                             <h3>작업 포인트</h3> 

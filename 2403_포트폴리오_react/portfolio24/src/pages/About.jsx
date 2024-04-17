@@ -93,9 +93,13 @@ export function About(props) {
                                 </div>
                                 <div className="item-content__text">
                                     <span>
-                                        웹 규격을 잘 지키며 표준 규약을 잘
-                                        지키며 html 구조를 잘 하고 마크업어쩌구
-                                        저쩌구
+                                      사이트 구성
+                                    </span>
+                                    <span>
+                                       사이트 구성
+                                    </span>
+                                    <span>
+                                       사이트 구성
                                     </span>
                                 </div>
                                 </div>
@@ -107,9 +111,10 @@ export function About(props) {
                                 </div>
                                 <div className="item-content__text">
                                     <span>
-                                        웹 규격을 잘 지키며 표준 규약을 잘
-                                        지키며 html 구조를 잘 하고 마크업어쩌구
-                                        저쩌구
+                                      dsfdfdsfdsfdsfdsfdsfdsfds
+                                    </span>
+                                    <span>
+                                      dsfdfdsfdsfdsfdsfdsfdsfds
                                     </span>
                                 </div>
                                 </div>
@@ -120,9 +125,13 @@ export function About(props) {
                                 </div>
                                 <div className="item-content__text">
                                     <span>
-                                        웹 규격을 잘 지키며 표준 규약을 잘
-                                        지키며 html 구조를 잘 하고 마크업어쩌구
-                                        저쩌구
+                                        dsfdsfdsfdsfds11111
+                                    </span>
+                                    <span>
+                                        dsfdsfdsfdsfds11111
+                                    </span>
+                                    <span>
+                                        dsfdsfdsfdsfds11111
                                     </span>
                                 </div>
                                 </div>

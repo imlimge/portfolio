@@ -188,6 +188,9 @@ display: inline-block;
     font-size: 1.2rem;
   }
 
+  .portfolio__content h3{
+    font-size: 1.8rem;
+  }
   .portfolio__content h4{
     font-size: 1.5rem;
     margin-bottom: .5rem;
@@ -353,6 +356,9 @@ box-shadow: 2px 2px 8px #000;
     margin-right: 1rem;
     vertical-align: -webkit-baseline-middle;
   }
+  .pcontent__skill h4{
+   display: inline-block;
+  }
 
   .pcontent__skill span{
     display: inline-block;
@@ -377,12 +383,9 @@ box-shadow: 2px 2px 8px #000;
 
 .pcontent__text span{
   display: inline-block;
-  padding: 4px 8px;
-
-  margin: 4px;
-  border-radius: 2rem;
-  font-size: 1.2rem;
-  border: 1px solid var(--black);
+  
+  font-size: 1.5rem;
+  
 }
 
 
