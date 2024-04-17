@@ -63,13 +63,11 @@ display: inline-block;
   /* right: 0; */
   width: 100%;
   text-align: right;
-  border-bottom: 3px solid var(--black);
 
 }
 
 .plist__title.side{
   border-bottom: 0;
-  border-top: 3px solid;
   top: -10px;
 }
 

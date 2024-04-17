@@ -84,7 +84,40 @@ export function Intro() {
                 <div className="intro">
                     {/* 인트로 이미지 */}
                     <div className="intro__img">
-                        <img src="./images/intro_temp.png" alt="인트로 이미지" />
+                        <img src="./images/intro_back.png" alt="인트로 이미지" />
+                      
+
+                        <img src="./images/intro_left_leg2.png" alt="인트로 이미지" />
+                        <img src="./images/intro_left_arm2.png" alt="인트로 이미지" />
+                        <img src="./images/intro_right_arm2.png" alt="인트로 이미지" />
+                        <img src="./images/intro_body.png" alt="인트로 이미지" />
+                      
+                        <img src="./images/intro_head2.png" alt="인트로 이미지" />
+                        <img src="./images/intro_eye2.png" alt="인트로 이미지" />
+                        <img src="./images/intro_mouse2.png" alt="인트로 이미지" />
+                        
+                        
+                        <div className="intro-calendar">
+                            <img src="./images/intro_calendar.png" alt="인트로 이미지" />
+                            
+                            <div className="date">
+                            <div className="date-top">
+                                <span>2024</span>
+                                <span>(sun)</span>
+                                <span>04</span>
+                            </div>
+                                <span>11</span>
+                            </div>
+                        </div>
+                        <div className="intro-watch">
+                            <img src="./images/intro_watch.png" alt="인트로 이미지" />
+                            <div className="time">
+                                <span>12</span>
+                                <span>31</span>
+                                <span>23</span>
+                            </div>
+
+                        </div>
                     </div>
                     
                     {/* 인트로 내용 */}
@@ -146,7 +179,7 @@ export function Intro() {
                                     value={inputText}
                                     onChange={handleInputChange}
                                     onKeyPress={handleKeyPress}
-                                    placeHolder="문구를 입력하세요"
+                                    placeholder="문구를 입력하세요"
                                 />
                                 <div className="send" onClick={handleSendClick}>
                                     <FontAwesomeIcon icon={faPaperPlane} className="fa-2x" />
