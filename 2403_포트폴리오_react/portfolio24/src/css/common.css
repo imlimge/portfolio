@@ -26,7 +26,17 @@
 }
 
 
+.opening{
+width: 100vw;
+height: 100vh;
+background-color: #fff;
+
+animation: open-ani 2s ease forwards;
+
+}
+
 .header__wrap{
+  background-color: #fff;
   display: flex;
 }
 
@@ -175,6 +185,10 @@ position: relative;
   border-bottom: var(--stroke);
  }
 
+ .menu-list>li:hover{
+background-color: yellow;
+cursor: url("../../public/images/cursor_hover.png"), auto;
+ }
 
 .menu-list__item{
   

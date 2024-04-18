@@ -16,7 +16,7 @@
   padding: 7rem 2rem;
 }
 .about-skill{
-  flex: 2;
+  flex: 1;
 
 }
 
@@ -55,6 +55,11 @@ font-size: 1.2rem;
   margin: 0 4px 4px 0;
 }
 
+.about__item p{
+font-size: 1.3rem;
+line-height: 1.8rem;
+}
+
 .about__item-content{
   display: flex;
   flex-wrap: wrap;
@@ -82,6 +87,17 @@ font-size: 1.2rem;
   font-weight: 900;
 }
 
+
+.about__item-title{
+
+  text-align: center;
+  grid-column: 1 / 3;
+}
+.about__item-title span{
+  font-size: 2rem;;
+}
+
+
 .about__item-name{
 display: inline-block;
 width: fit-content;
@@ -101,7 +117,6 @@ border-radius: 4px;
 }
 
 .item-content__box{
-  max-width: 200px;
   padding: 4px;
 }
 

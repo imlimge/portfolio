@@ -84,7 +84,12 @@ export function Intro() {
                 <div className="intro">
                     {/* 인트로 이미지 */}
                     <div className="intro__img">
+              {/*   <div className="opening">
+              
+              </div> */}
+                   
                         <img src="./images/intro_back.png" alt="인트로 이미지" />
+                        <img src="./images/intro_pc.gif" alt="인트로 이미지" />
                       
 
                         <img src="./images/intro_left_leg2.png" alt="인트로 이미지" />
@@ -96,6 +101,8 @@ export function Intro() {
                         <img src="./images/intro_eye2.png" alt="인트로 이미지" />
                         <img src="./images/intro_mouse2.png" alt="인트로 이미지" />
                         
+                        
+                   
                         
                         <div className="intro-calendar">
                             <img src="./images/intro_calendar.png" alt="인트로 이미지" />
@@ -118,6 +125,9 @@ export function Intro() {
                             </div>
 
                         </div>
+                        
+                        <img src="./images/intro_light2.png" alt="인트로 이미지" />
+
                     </div>
                     
                     {/* 인트로 내용 */}
@@ -155,8 +165,7 @@ export function Intro() {
                                 </div>
                                 <div className="text__item">
                                     <p>
-                                        사람을 더 잘 이해하고 더 나은 표현을 위해
-                                        계속 노력하는 웹 개발자가 되겠습니다.
+                                        소통을 중요하게 생각하고 함께 일하는 것이 편한 개발자가 되고 싶습니다.
                                     </p>
                                 </div>
                             </div>

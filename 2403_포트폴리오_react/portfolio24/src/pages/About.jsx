@@ -71,6 +71,33 @@ export function About(props) {
                                 <span>좋아하는 문구</span>
                             </div>
                         </div>
+
+                        <div className="about__item">
+                            <div className="about__item-content">
+                                <p>안녕하세요. <br />
+                                    웹 개발자로 계속 발전하고 싶은 임경은입니다. <br /><br />
+                                 
+                                    우연히 웹 사이트를 제작하게 되었는데
+                                    사람과 상호작용하는 웹 화면을 구현하는 것에 
+                                    흥미가 생겼습니다. <br /><br />
+
+                                    그렇게 웹 사이트를 배워가다 보니
+                                    기능을 구현할 때 방법을 찾아가는 과정에서 
+                                    어려운 문제를 끊임없이 고민하며 해결했을 때 퍼즐이 풀리듯 재밌었고
+                                    다양한 사람들이 거리낌 없이 정보를 공유하는 것이 신기했습니다.
+                                    또한 목표는 한 가지이지만 해결하는 방법은 
+                                    여러 가지가 정답인 점이 좋습니다.<br /> <br />
+                                    
+                                    계속 더 배워나가며 많은 정답 중에 더 좋은 선택이 어떤 것인지 알고 싶고<br/>
+                                    사람들과 소통하며 함께 일을 했을 때<br/>
+                                    계속 같이 일하고 싶은 웹 개발자가 되고 싶습니다.
+                                </p>
+                               
+                            </div>
+                            <div className="about__item-name">
+                                <span>소개</span>
+                            </div>
+                        </div>
                     </div>
                     {/* <!-- about__item__box --> */}
                 </div>
@@ -86,83 +113,87 @@ export function About(props) {
                         <div className="about__item">
                             <div className="about__item-content">
 
-                              {/* <!-- 소제목: html --> */}
+                            <div className="about__item-title">
+                              <span>(html, css, javascript, jQuery, react)</span>
+                            </div>
+
+                              {/* <!-- 소제목: 사이트 설계 --> */}
                               <div className="item-content__box">
                                 <div className="item-content__title">
-                                    <span>html</span>
+                                    <span>사이트 설계</span>
                                 </div>
                                 <div className="item-content__text">
                                     <span>
-                                      사이트 구성
+                                      html 단계에서 웹 접근성을 고려하여 설계합니다
                                     </span>
-                                    <span>
-                                       사이트 구성
-                                    </span>
-                                    <span>
-                                       사이트 구성
-                                    </span>
+                               
                                 </div>
                                 </div>
 
-                                {/* <!-- 소제목: CSS --> */}
+                                {/* <!-- 소제목: 반응형 웹 --> */}
                                 <div className="item-content__box">
                                 <div className="item-content__title">
-                                    <span>CSS</span>
+                                    <span>반응형 웹</span>
                                 </div>
                                 <div className="item-content__text">
                                     <span>
-                                      dsfdfdsfdsfdsfdsfdsfdsfds
+                                      미디어 쿼리를 사용하여 PC와 모바일에서 사용 가능한 반응형 웹 제작 경험
                                     </span>
-                                    <span>
-                                      dsfdfdsfdsfdsfdsfdsfdsfds
-                                    </span>
+                                                                 </div>
                                 </div>
-                                </div>
-                                {/* <!-- 소제목: javascript --> */}
+                                {/* <!-- 소제목: 라이브러리 --> */}
                                 <div className="item-content__box">
                                 <div className="item-content__title">
-                                    <span>javascript</span>
+                                    <span>라이브러리</span>
                                 </div>
                                 <div className="item-content__text">
                                     <span>
-                                        dsfdsfdsfdsfds11111
+                                        스와이퍼 슬라이더를 사용한 이미지 슬라이더 구현
                                     </span>
                                     <span>
-                                        dsfdsfdsfdsfds11111
+                                        제이쿼리를 사용하여 기능 구현
                                     </span>
                                     <span>
-                                        dsfdsfdsfdsfds11111
+                                        리액트를 사용한 사이트 제작
                                     </span>
                                 </div>
                                 </div>
-                                {/* <!-- 소제목: React --> */}
+                                {/* <!-- 소제목: 기능구현 --> */}
                                 <div className="item-content__box">
                                 <div className="item-content__title">
-                                    <span>React</span>
+                                    <span>기능구현</span>
                                 </div>
                                 <div className="item-content__text">
                                     <span>
-                                        웹 규격을 잘 지키며 표준 규약을 잘
-                                        지키며 html 구조를 잘 하고 마크업어쩌구
-                                        저쩌구
+                                        css로 화면의 모습을 구현합니다
                                     </span>
+                                    <span>
+                                        javascript, jQuery로 원하는 기능을 구현합니다
+                                        (클릭 이벤트, 스크롤 이벤트, 움직임 등 )
+                                    </span>
+                                    
                                 </div>
                                 </div>
                                 
-                                {/* <!-- 소제목: React --> */}
+                                {/* <!-- 소제목: 협업 --> */}
                                 <div className="item-content__box">
                                 <div className="item-content__title">
-                                    <span>React</span>
+                                    <span>협업</span>
                                 </div>
                                 <div className="item-content__text">
                                     <span>
-                                        웹 규격을 잘 지키며 표준 규약을 잘
-                                        지키며 html 구조를 잘 하고 마크업어쩌구
-                                        저쩌구
+                                       git을 사용하여 상태관리 합니다
                                     </span>
+                                    <span>
+                                       디자인 경험으로 인하여 디자이너와 소통이 가능합니다
+                                    </span>
+                                    <span>
+                                       의견이 다르다면 서로 소통하여 최선을 결과를 위해 노력합니다
+                                    </span>
+                                    
                                 </div>
                                 </div>
-
+                                
 
                             </div>
                             {/* <!-- about__item-content --> */}

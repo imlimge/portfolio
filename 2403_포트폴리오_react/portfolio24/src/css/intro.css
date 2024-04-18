@@ -11,7 +11,23 @@
   display: flex;
   flex-direction: row;
   height: 100%;
+
 }
+
+
+
+.opening{
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  
+  animation: open-ani 2s ease forwards 1s;
+  position: absolute;
+  z-index: 99;
+  border: 3px solid var(--black);
+  top: 0;
+  }
+  
 
 .intro__img{
   border-right: var(--stroke);
@@ -33,10 +49,61 @@
 }
 
 
-.intro__img img:nth-child(2){
-transform: rotate(1deg);
- 
+/* 다리 */
+.intro__img img:nth-child(3){
+animation: leg-ani 1s ease-in-out infinite alternate ;
+ }
+
+/* 왼쪽팔 */
+.intro__img img:nth-child(4){
+animation: arm-ani .5s ease infinite;
+transform-origin: right;
+
+ }
+/* 오른쪽팔 */
+.intro__img img:nth-child(5){
+  animation: arm-ani .5s ease infinite .4s;
+ }
+/* 머리 */
+.intro__img img:nth-child(7){
+
+  animation: head-ani 1s ease infinite alternate ;
+ }
+/* 눈 */
+.intro__img img:nth-child(8){
+  animation: head-ani 1s ease infinite alternate ;
+ }
+
+/* 조명 */
+.intro__img img:last-child{
+  opacity: .5;
+  /* filter: blur(2px); */
+ }
+
+
+ /* .intro__img 마우스 오버 시 동작 */
+.intro__img:hover img:nth-child(2) {
+  /* 이미지 소스 변경 */
+  content: url('../../public/images/intro_pc_hover.png');
 }
+ /* .intro__img 마우스 오버 시 동작 */
+.intro__img:hover img:nth-child(8) {
+  /* 이미지 소스 변경 */
+  content: url('../../public/images/intro_eye_hover.png');
+}
+ /* .intro__img 마우스 오버 시 동작 */
+.intro__img:hover img:nth-child(9) {
+  /* 이미지 소스 변경 */
+  content: url('../../public/images/intro_mouse_hover.png');
+}
+
+.intro__img:hover img {
+  animation-play-state: paused;
+}
+
+
+
+
 
 .intro_front img{
   position: absolute;

@@ -118,6 +118,7 @@ $(window).on("resize", function() {
     <>
   {/* <!-- 헤더 (네비게이션) --> */}
   <header id="header">
+          
             <div className="header__wrap">
                 {/* <!-- 상단 정보바 --> */}
                 <div className="header__info">
@@ -184,6 +185,7 @@ $(window).on("resize", function() {
                     </ul>
                 </nav>
             </div>
+           
         </header>
 
         {/* <!-- 메인 --> */}
