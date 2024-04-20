@@ -48,3 +48,59 @@
 .inner{
 
 }
+
+
+
+////// 포트폴리오 메뉴 ////
+
+
+                        {/* <!-- 포트폴리오 메뉴 --> */}
+                        <div className="portfolio__menu">
+                                            
+                            <div className="pmenu__box">
+                            {/* <!-- 웹 사이트 --> */}
+                            <div className="pmenu__title">
+                                <h5><a href="#">웹 사이트</a></h5>
+                            </div>
+                            {/* <!-- menu__title --> */}
+
+                                <ul className="pmenu-list">
+                                    <li className="pmenu-list__item on"><a href="#">햄버거 사이트</a></li>
+                                    <li className="pmenu-list__item"><a href="#">학원 사이트</a></li>
+                                    <li className="pmenu-list__item"><a href="#">쇼핑몰 기능 구현</a></li>
+                                </ul>
+                                
+                            {/* <!-- 워드프레스 --> */}
+                            <div className="pmenu__title">
+                                <h5><a href="#">워드프레스</a></h5>
+                            </div>
+                            {/* <!-- menu__title --> */}
+                                <ul className="pmenu__list">
+                                    <li className="pmenu-list__item"><a href="#">회사 사이트</a></li>
+                                </ul>
+
+                            {/* <!-- 디자인 --> */}
+                            <div className="pmenu__title">
+                                <h5><a href="#">디자인</a></h5>
+                            </div>
+
+
+                            </div>
+                            {/* <!-- menu__box --> */}
+                        </div>
+                        {/* <!-- portfolio__menu --> */}
+
+
+
+
+//// 디자인용 포트폴리오 새창 ///
+
+    {/* <!-- 포트폴리오 개별 내용 새창 --> */}
+                    <div className="portfolio__content-more design">
+                        <h1>ddddd</h1>
+                        {/* <!-- 포트폴리오 세부 내용 --> */}
+                        <div className="portfolio__content">
+                            {/* <!-- 창닫기 버튼 --> */}
+                            <button className="close__btn">×</button>
+                        </div>
+                    </div>
