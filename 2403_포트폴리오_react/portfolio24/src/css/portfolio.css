@@ -21,6 +21,7 @@
   font-size: 2rem;
 font-family: var(--font-title-bold);
 display: inline-block;
+margin-right: 1rem;
 }
 
 
@@ -53,7 +54,7 @@ display: inline-block;
     position: relative;
     width: 25vw;
     display: inline-block;
-    
+    padding: 1rem;
   }
 
 
@@ -73,6 +74,7 @@ display: inline-block;
 
 .plist__title.side h3{
   padding-top: 11px;
+  
 }
 
   .portfolio__item .inner{
@@ -124,10 +126,21 @@ display: inline-block;
     background-color: #888;
     margin-right: 30px;
     border-radius: 4px;
-
+    position: relative;
     /* float: left; */
+    background-image: url(../../public/images/portfolio/site_01/main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
   }
 
+  .pitem__img img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
 
   .pitem__img::after{
     content: '';
@@ -147,11 +160,15 @@ display: inline-block;
 
 
   .pitem__skill{
-
+    font-weight: 900;
+    margin-top: 4px;
+  }
+  .pitem__skill span{
+    margin-right: 8px;
   }
 
   .pitem__txt{
-
+    margin-top: 8px;
   }
 
 

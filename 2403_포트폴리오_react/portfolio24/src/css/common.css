@@ -86,13 +86,14 @@ animation: open-ani 2s ease forwards;
 
 }
 
-.header__title span{
-margin-right: 8px;
 
-display: inline-block;
-position: relative;
+.header__title span{
+  margin-right: 8px;
+  display: inline-block;
+  position: relative;
 
 }
+
 
 .header__title span::before{
   content: '';
@@ -103,13 +104,13 @@ position: relative;
   width: 0;
   top: 0;
   left: 0;
-  z-index: -1;
   transition: width 0.2s ease-in-out;
+  z-index: -1;
 }
 
 
 .header__title span:hover {
-
+  z-index: 1;
 
 }
 

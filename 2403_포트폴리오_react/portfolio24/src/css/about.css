@@ -58,6 +58,7 @@ font-size: 1.2rem;
 .about__item p{
 font-size: 1.3rem;
 line-height: 1.8rem;
+padding: 1rem;
 }
 
 .about__item-content{
@@ -74,12 +75,16 @@ line-height: 1.8rem;
 }
 .about-skill .about__item{
   width: 100%;
+  
 }
 .about-skill .about__item-content{
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .about__item-content span{

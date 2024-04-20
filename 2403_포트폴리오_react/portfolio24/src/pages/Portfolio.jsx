@@ -111,7 +111,7 @@ export function Portfolio() {
                                         <h4>버거사이트</h4>
                                     </div>
                                     <div className="pitem__img">
-                                        <img src="" alt="" />
+                                        {/* <img src="./images/portfolio/site_01/main.png" alt="" /> */}
                                     </div>
                                     <div className="pitem__skill">
                                         <span>html</span>
@@ -133,7 +133,7 @@ export function Portfolio() {
                                        <h4>학원 사이트</h4>
                                     </div>
                                 <div className="pitem__img">
-                                    <img src="" alt=""/>
+                                    
                                 </div>
                                 <div className="pitem__skill">
                                     <span>html</span>
@@ -156,7 +156,7 @@ export function Portfolio() {
                                        <h4>쇼핑몰 기능구현</h4>
                                     </div>
                                 <div className="pitem__img">
-                                    <img src="" alt=""/>
+                                    
                                 </div>
                                 <div className="pitem__skill">
                                     <span>html</span>
