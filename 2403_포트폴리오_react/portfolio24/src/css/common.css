@@ -1,6 +1,6 @@
 
 #header, #main{
-  /* margin: 48px; */
+  margin: 5% min(12%, 11vw);
   outline: var(--stroke);
 }
 
@@ -26,14 +26,14 @@
 }
 
 
-.opening{
+/* .opening{
 width: 100vw;
 height: 100vh;
 background-color: #fff;
 
 animation: open-ani 2s ease forwards;
 
-}
+} */
 
 .header__wrap{
   background-color: #fff;
@@ -51,6 +51,8 @@ animation: open-ani 2s ease forwards;
   align-items: center;;
 
   overflow: hidden;
+
+  background-color: var(--color-01);
 }
 
 
@@ -97,7 +99,7 @@ animation: open-ani 2s ease forwards;
 
 .header__title span::before{
   content: '';
-  background-color: yellow;
+  background-color: var(--under-color);
 
   position: absolute;
   height: 90%;
@@ -126,7 +128,7 @@ animation: open-ani 2s ease forwards;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--color-03);
 }
 
 .header__nav:hover
@@ -171,6 +173,8 @@ animation: open-ani 2s ease forwards;
   flex-direction: column;
   height: 100%;
   justify-content: space-evenly;
+
+  background-color: var(--color-03);
   
  }
 
@@ -187,7 +191,7 @@ animation: open-ani 2s ease forwards;
  }
 
  .menu-list>li:hover{
-background-color: yellow;
+background-color: var(--under-color);
 cursor: url("../../public/images/cursor_hover.png"), auto;
  }
 

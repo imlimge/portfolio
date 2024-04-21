@@ -10,7 +10,23 @@
 
   /* 폰트 */
   --font-title-bold:'GangwonEduPowerExtraBoldA';
-  
+
+
+  --under-color:darksalmon;
+
+  --color-01: wheat;
+  --color-02: antiquewhite;
+  --color-03: burlywood;
+  --color-04: blanchedalmond;
+  --color-05: lightsalmon;
+  --color-06: cornsilk;
+  --color-07: bisque;
+  --color-08: beige;
+  --color-09: cadetblue;
+  --color-10: khaki;
+  --color-11: darkcyan;;
+
+
 }
 
 
@@ -23,7 +39,7 @@ body{
   height:100%;
 
   font-family: "Pretendard Variable";
-
+    background-color: beige;
 } 
 
 a:hover {
@@ -37,7 +53,7 @@ button:hover {
 
  /* 드래그 색상 */
  ::selection {
-  background-color: #fff12f;
+  background-color: var(--color-05);
   color:var(--black);
   font-weight: bold;
 }

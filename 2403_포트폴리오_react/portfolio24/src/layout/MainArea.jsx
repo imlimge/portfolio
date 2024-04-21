@@ -27,7 +27,7 @@ burger.on('click', function(e){
 	
 });
 
-// 햄버거 메뉴의 각 항목을 클릭할 때 메뉴를 닫는 기능 추가
+// 햄버거 메뉴의 각 항목을 클릭할 때 메뉴 닫음
 $(".menu-list__item").on("click", function() {
   // 햄버거 메뉴가 열려 있는 경우에만 동작
   if ($(".header__nav-menu").hasClass("on")) {
@@ -35,6 +35,17 @@ $(".menu-list__item").on("click", function() {
     $(".header__nav-menu").removeClass("on");
     // 섹션 높이 초기화
     $(".header__nav-menu").css("height", "0");
+  }
+});
+
+// 헤더 타이틀의 각 span 요소를 클릭할 때
+$(".header__title span").on("click", function() {
+  // 헤더 네비게이션 메뉴에 on 클래스가 있는 경우
+  if ($(".header__nav-menu").hasClass("on")) {
+      // on 클래스를 제거하여 메뉴 닫기
+      $(".header__nav-menu").removeClass("on");
+      // 섹션 높이 초기화
+      $(".header__nav-menu").css("height", "0");
   }
 });
 

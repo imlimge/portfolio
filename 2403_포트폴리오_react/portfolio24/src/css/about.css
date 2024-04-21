@@ -15,10 +15,7 @@
   flex: 1;
   padding: 7rem 2rem;
 }
-.about-skill{
-  flex: 1;
 
-}
 
 .about-me h3,.about-skill h3{
 font-size: 2rem;
@@ -34,10 +31,13 @@ font-size: 1.2rem;
 .about-me{
   border-right: var(--stroke);
   overflow: auto;
+  background-color: var(--color-09);
 }
 
 .about-skill{
+  flex: 1;
   overflow: auto;
+  background-color: var(--color-05);
 }
 
 .about__item__box{
@@ -66,7 +66,7 @@ padding: 1rem;
   flex-wrap: wrap;
   width: fit-content;
   padding: 4px;
-  background-color: #fff;
+  background-color: var(--color-06);
   border: 2px solid var(--black);
   border-radius: 4px;
   margin-bottom: 2px;

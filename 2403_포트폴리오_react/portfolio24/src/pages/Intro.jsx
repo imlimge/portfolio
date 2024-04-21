@@ -84,9 +84,10 @@ export function Intro() {
                 <div className="intro">
                     {/* 인트로 이미지 */}
                     <div className="intro__img">
-              {/*   <div className="opening">
-              
-              </div> */}
+                <div className="cover"></div> 
+                <div className="opening">
+                    <span>Hello!</span>
+                </div>
                    
                         <img src="./images/intro_back.png" alt="인트로 이미지" />
                         <img src="./images/intro_pc.gif" alt="인트로 이미지" />
@@ -172,7 +173,7 @@ export function Intro() {
                             <div className="text__item-list add">
                                 {/* 새로운 메시지들을 순차적으로 보여줍니다. */}
                                 {newMessages.map(message => (
-                                    <div key={message.id} className="text__item">
+                                    <div key={message.id} className="text__item right">
                                         <p>{message.text}</p>
                                     </div>
                                 ))}

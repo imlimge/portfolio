@@ -10,7 +10,7 @@ export const pData = {
   percent:`100%`,
   txt: `버거 사이트 구현`,
   link:`https://imlimge.github.io/LKE-burger/`,
-  isrc: `./images/portfolio/site_01/main.png`,
+  isrc: `./images/portfolio/site_01/main2.png`,
   date: `23.8~23.9`,
   explain:[`버거킹 사이트를 직접 구현해보며 html,css,javascript,jquery 사용법을 배움`,`호주 버거킹 사이트를 참고하여 한국 사이트로 재구성`]
   ,
@@ -59,7 +59,7 @@ export const pData = {
   percent:`100%`,
   txt: `학원 사이트 구현`,
   link:`https://imlimge.github.io/LKE-kairos2/`,
-  isrc: `./images/portfolio/site_02/main.png`,
+  isrc: `./images/portfolio/site_02/main2.png`,
   date: `23.10~23.12`,
   explain:[`사용자와 사이트 구성 및 디자인 방향 협의 후 기술 구현`,`리액트를 사용하여 학원 사이트 제작`]
   ,
@@ -95,7 +95,7 @@ export const pData = {
   percent:`100%`,
   txt: `쇼핑몰 사이트 구현`,
   link:`https://imlimge.github.io/LKE-shop/`,
-  isrc: `./images/portfolio/site_03/main.png`,
+  isrc: `./images/portfolio/site_03/main2.png`,
   date: `23.12~24.01`,
   explain:[`쇼핑몰에서 자주 쓰이는 기능 구현`]
   ,
@@ -132,7 +132,7 @@ wordpress:{
   skill:['photoshop','illustrator','wordpress'],
   percent:`80%`,
   txt: `회사 사이트 제작`,
-  isrc: `./images/portfolio/wordpress/main.png`,
+  isrc: `./images/portfolio/wordpress/main2.png`,
   date: `21.03~21.07`,
   explain:[`워드프레스 avada 템플릿을 이용한 사이트 구현`,`사이트 내용 구성 (사이트에 사용되는 모든 문구 및 Q&A 등)`,`로고 및 일러스트 이미지 제작 (사이트에 사용된 모든 이미지 소스 제작)`]
   

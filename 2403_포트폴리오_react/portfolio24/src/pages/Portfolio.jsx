@@ -25,17 +25,139 @@ export function Portfolio() {
                     .show();
                 console.log("ww");
             }
+          
         });
 
         // 창닫기 버튼을 클릭할 때
         $(".close__btn").click(function () {
+                 // 스크롤을 맨 위로 이동합니다.
+                 $(".portfolio__content").scrollTop(0);  
+                 
             // 부모 요소인 .portfolio__content-more를 찾아서 숨깁니다.
             $(this)
                 .parent(".portfolio__content")
                 .parent(".portfolio__content-more")
                 .hide();
+
+         
         });
     });
+
+
+
+useEffect(() => {
+    const setImageBoxHeight = () => {
+        const pCMore = document.querySelector('.portfolio__content-more');
+        const imageBox = document.querySelector('.image__box');
+
+        // 포트폴리오 세부 내용의 높이를 가져와서 이미지 상자의 높이로 설정
+        if (pCMore && imageBox) {
+            const contentHeight = pCMore.clientHeight;
+            imageBox.style.height = `${contentHeight}px`;
+        }
+    };
+
+    // 페이지 로드 시 이미지 상자 높이 설정
+    setImageBoxHeight();
+
+    // 윈도우 리사이즈 이벤트에 대한 이미지 상자 높이 업데이트
+    window.addEventListener('resize', setImageBoxHeight);
+
+    // 컴포넌트가 unmount될 때 해당 리스너 제거
+    return () => {
+        window.removeEventListener('resize', setImageBoxHeight);
+    };
+});
+
+
+useEffect(() => {
+    // 포트폴리오 세부 내용의 높이를 가져오는 함수
+    const getContentHeight = () => {
+        const pCMore = document.querySelector('.portfolio__content-more');
+        return pCMore ? pCMore.clientHeight : 0;
+    };
+
+    // 이미지 상자 높이 설정 함수
+    const setImageBoxHeight = () => {
+        const imageBox = document.querySelector('.image__box');
+        const contentHeight = getContentHeight();
+
+        // 이미지 상자의 높이를 포트폴리오 세부 내용의 높이로 설정
+        if (imageBox && contentHeight) {
+            imageBox.style.height = `${contentHeight}px`;
+        }
+    };
+
+    // 페이지 로드 시 이미지 상자 높이 설정
+    setImageBoxHeight();
+
+    // 윈도우 리사이즈 이벤트에 대한 이미지 상자 높이 업데이트
+    window.addEventListener('resize', setImageBoxHeight);
+
+    // 컴포넌트가 unmount될 때 해당 리스너 제거
+    return () => {
+        window.removeEventListener('resize', setImageBoxHeight);
+    };
+}, []);
+
+useEffect(() => {
+    const pCMore = document.querySelector('.portfolio__content-more');
+
+    // 포트폴리오 세부 내용이 있고 드래그 가능한 요소일 때
+    if (pCMore) {
+        let isDragging = false;
+        let initialX;
+        let initialY;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        // 드래그 시작 이벤트 핸들러
+        const startDragging = (e) => {
+            isDragging = true;
+            initialX = e.clientX - offsetX;
+            initialY = e.clientY - offsetY;
+        };
+
+        // 드래그 중 이벤트 핸들러
+        const drag = (e) => {
+            if (isDragging) {
+                e.preventDefault();
+                const currentX = e.clientX - initialX;
+                const currentY = e.clientY - initialY;
+                offsetX = currentX;
+                offsetY = currentY;
+                pCMore.style.transform = `translate(${currentX}px, ${currentY}px)`;
+            }
+        };
+
+        // 드래그 종료 이벤트 핸들러
+        const stopDragging = () => {
+            isDragging = false;
+        };
+
+        // 마우스 다운 이벤트에 드래그 시작 이벤트 핸들러 연결
+        pCMore.addEventListener('mousedown', startDragging);
+
+        // 마우스 움직임 이벤트에 드래그 중 이벤트 핸들러 연결
+        pCMore.addEventListener('mousemove', drag);
+
+        // 마우스 업 이벤트에 드래그 종료 이벤트 핸들러 연결
+        pCMore.addEventListener('mouseup', stopDragging);
+
+        // 컴포넌트가 unmount될 때 이벤트 핸들러 제거
+        return () => {
+            pCMore.removeEventListener('mousedown', startDragging);
+            pCMore.removeEventListener('mousemove', drag);
+            pCMore.removeEventListener('mouseup', stopDragging);
+        };
+    }
+}, []);
+
+
+
+
+
+
 
     // 아이템 만들기 함수
     const makeItem = () => {
@@ -236,10 +358,22 @@ export function Portfolio() {
                     {/* <!-- 포트폴리오 전체 내용 표시 --> */}
 
                     <div className="portfolio__lists">
+                     
+                        {/* <!-- 포트폴리오 전체 내용 표시 --> */}
+                        <div className="portfolio__list">
+                            {makeItem(Item)}
+{/* 
+                            <div className="plist__title">
+                                <h3>웹 개발</h3>
+                            </div> */}
+                        </div>
+                        {/* <!-- portfolio__list --> */}
+
+
                         <div className="portfolio__list side">
-                            <div className="plist__title side">
+                       {/*      <div className="plist__title side">
                                 <h3>워드프레스 및 디자인</h3>
-                            </div>
+                            </div> */}
 
                             {/* <!-- 프로젝트 아이템 --> */}
 
@@ -266,15 +400,7 @@ export function Portfolio() {
                         </div>
                         {/* <!-- portfolio__list --> */}
 
-                        {/* <!-- 포트폴리오 전체 내용 표시 --> */}
-                        <div className="portfolio__list">
-                            {makeItem(Item)}
 
-                            <div className="plist__title">
-                                <h3>웹 개발</h3>
-                            </div>
-                        </div>
-                        {/* <!-- portfolio__list --> */}
                     </div>
                     {/* <!-- portfolio__lists --> */}
 
