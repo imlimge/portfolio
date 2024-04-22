@@ -10,6 +10,7 @@ export const pData = {
   percent:`100%`,
   txt: `버거 사이트 구현`,
   link:`https://imlimge.github.io/LKE-burger/`,
+  thumisrc: `./images/portfolio/site_01/main.png`,
   isrc: `./images/portfolio/site_01/main2.png`,
   date: `23.8~23.9`,
   explain:[`버거킹 사이트를 직접 구현해보며 html,css,javascript,jquery 사용법을 배움`,`호주 버거킹 사이트를 참고하여 한국 사이트로 재구성`]
@@ -57,8 +58,9 @@ export const pData = {
   name: "학원 사이트",
   skill:['html','CSS','javascript','jQuery','React'],
   percent:`100%`,
-  txt: `학원 사이트 구현`,
+  txt: `[리액트] 학원 사이트 구현`,
   link:`https://imlimge.github.io/LKE-kairos2/`,
+  thumisrc: `./images/portfolio/site_02/main.png`,
   isrc: `./images/portfolio/site_02/main2.png`,
   date: `23.10~23.12`,
   explain:[`사용자와 사이트 구성 및 디자인 방향 협의 후 기술 구현`,`리액트를 사용하여 학원 사이트 제작`]
@@ -93,8 +95,9 @@ export const pData = {
   name: "쇼핑몰 사이트",
   skill:['html','CSS','javascript','jQuery','React'],
   percent:`100%`,
-  txt: `쇼핑몰 사이트 구현`,
+  txt: `[리액트] 쇼핑몰 사이트 구현`,
   link:`https://imlimge.github.io/LKE-shop/`,
+  thumisrc: `./images/portfolio/site_03/main.png`,
   isrc: `./images/portfolio/site_03/main2.png`,
   date: `23.12~24.01`,
   explain:[`쇼핑몰에서 자주 쓰이는 기능 구현`]
@@ -113,10 +116,11 @@ export const pData = {
       {
         isrc:`./images/portfolio/site_03/point_03.png`,
         title:`쇼핑몰 기능 구현`,
-        cont:`카테고리 분류, 순서 변경 기능, 상품 검색,
-        장바구니 아이템 선택, 수량변경, 선택삭제, 개별삭제,
-        선택 수량에 따른 가격 합계 및 배송비 선택적 포함,
-        로컬스토리지를 사용하여 장바구니 리스트에 이용`
+        cont:[`카테고리 체크 시 특정 카테고리 아이템만 출력`, 
+        `아이템 페이징 및 아이템 순서 변경 기능`, `전체 상품 검색`,
+        `장바구니 아이템 선택, 선택삭제, 개별삭제, 전체삭제`,
+        `선택 수량에 따른 가격 합계 및 배송비 선택적 포함`,
+        `로컬스토리지를 사용하여 장바구니 리스트에 이용`]
       },
      
       
@@ -132,6 +136,8 @@ wordpress:{
   skill:['photoshop','illustrator','wordpress'],
   percent:`80%`,
   txt: `회사 사이트 제작`,
+  link:`https://01net.co.kr/`,
+  thumisrc: `./images/portfolio/wordpress/main.png`,
   isrc: `./images/portfolio/wordpress/main2.png`,
   date: `21.03~21.07`,
   explain:[`워드프레스 avada 템플릿을 이용한 사이트 구현`,`사이트 내용 구성 (사이트에 사용되는 모든 문구 및 Q&A 등)`,`로고 및 일러스트 이미지 제작 (사이트에 사용된 모든 이미지 소스 제작)`]
@@ -141,10 +147,11 @@ wordpress:{
   },
 
   design:[
-    `./images/portfolio/design/01.png`,
-    `./images/portfolio/design/01.png`,
-    `./images/portfolio/design/01.png`,
-    `./images/portfolio/design/01.png`,
+    {isrc:`./images/portfolio/design/01.png`, title:`디자인1`},
+    {isrc:`./images/portfolio/design/01.png`, title:`디자인1`},
+    {isrc:`./images/portfolio/design/01.png`, title:`디자인1`},
+    {isrc:`./images/portfolio/design/01.png`, title:`디자인1`},
+
 
 
   ]

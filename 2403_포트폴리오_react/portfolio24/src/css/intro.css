@@ -142,7 +142,7 @@ transform-origin: right;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 8vw;
+  width: 7.6vw;
 
 
 }
@@ -188,7 +188,7 @@ transform-origin: right;
   position: absolute;
   width: 8vw;
   top: 19vh;
-  right: 25vw;
+  right: 15vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -442,3 +442,90 @@ input:focus {outline:none;}
 .send:hover{
   background-color: #424242;
 }
+
+
+
+
+
+
+/* 타블렛 */
+@media screen and (max-width:1023px) {
+
+  
+}
+
+/* 모바일 */
+@media screen and (max-width:600px) {
+
+  .opening{
+    /* display: none; */
+  }
+
+  .intro {
+    flex-direction: column;
+    height: 100%;
+}
+.intro__content {
+  border-top: 3px solid var(--black);
+
+
+}
+.intro__content-hello {
+  display: none;
+}
+.intro__content-me {
+
+}
+
+.intro__content-text {
+ z-index: 8;
+}
+.text__bottom {
+  z-index: 9;
+}
+
+.intro__img{
+  height: 26%;
+  flex: none;
+  border-right: none;
+}
+
+.hello__item {
+  display: none;
+}
+
+.intro-calendar, .intro-watch{
+  display: none;
+}
+.intro__content-me{
+  padding: 1rem;
+}
+
+.intro__content-me h4 {
+  font-size: 1.3rem;
+}
+
+.intro__content-me h2 {
+  font-size: 3rem;
+  margin-bottom: 0rem;
+}
+
+.text__item-list {
+  padding: 1rem;
+  margin-bottom: -55.7px;
+}
+.intro__content-text p {
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+
+}
+.text__item-list.add {
+  margin-top: 2rem;
+}
+
+.text__bottom {
+  padding: 0 1rem;
+
+}
+}
+

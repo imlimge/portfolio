@@ -147,3 +147,38 @@ font-size: 1.3rem;
  content: '- ';
 
 }
+
+
+
+/* 타블렛 */
+@media screen and (max-width:1023px) {
+
+  
+}
+
+/* 모바일 */
+@media screen and (max-width:600px) {
+
+#about{
+  
+flex-direction: column;
+}
+.about-skill {
+border-top: 3px solid var(--black);
+}
+
+
+.about-skill .about__item-content {
+
+  grid-template-columns: repeat(1, 1fr);
+
+}
+
+.about__item-title {
+  grid-column: 1 / 1;
+}
+.about-me {
+  border-right: none;
+
+}
+}

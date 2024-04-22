@@ -224,3 +224,28 @@ cursor: url("../../public/images/cursor_hover.png"), auto;
   top: 0;
   background-color: #fff;
  }
+
+
+
+
+ /* 타블렛 */
+ @media screen and (max-width:1023px) {
+#header,#main{
+  margin: 5%;
+}
+
+  }
+  
+  /* 모바일 */
+  @media screen and (max-width:600px) {
+
+.header__title{
+  display: none;
+}
+
+.sub-list {
+  display: none;
+}
+
+  }
+  

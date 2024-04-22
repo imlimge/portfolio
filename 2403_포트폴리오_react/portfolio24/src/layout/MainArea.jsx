@@ -108,7 +108,7 @@ $(window).on("resize", function() {
     $(".header__nav-menu").height(totalHeight);
     $(".header__nav-menu.on").css('transition','none');
 
-    // 리사이즈 움직임이 없는 것을 감지하여 transition 설정 다시하기
+    // 리사이즈 움직임 감지 후 transition 설정 다시하기
     let resizeTimer;
     $(this).on("resize", function() {
       clearTimeout(resizeTimer);
@@ -121,6 +121,10 @@ $(window).on("resize", function() {
     });
   }
 });
+
+
+
+
 
 
 
