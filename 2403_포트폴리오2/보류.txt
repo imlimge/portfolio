@@ -104,3 +104,80 @@
                             <button className="close__btn">×</button>
                         </div>
                     </div>
+
+
+
+                    ////포트폴리오 스와이퍼
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Mousewheel, Pagination, Grid } from "swiper/modules";
+
+
+
+
+    const makeMoreDesign = () => {
+        return pData.design.map((v, i) => (
+            <SwiperSlide key={i}>
+                <img src={v.isrc} alt={v.title} />
+            </SwiperSlide>
+        ));
+    };
+
+
+
+
+
+                     {/*  <Swiper
+                                grid={{
+                                    rows: 2,
+                                }}
+                                spaceBetween={30}
+                                breakpoints={{
+                                    850: {
+                                        slidesPerView: 3,
+                                        spaceBetween: 0,
+                                        rows: 2,
+                                    },
+
+                                    600: {
+                                        slidesPerView: 1,
+                                        spaceBetween: 0,
+                                        rows: 2,
+                                    },
+                                }}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                modules={[Grid, Pagination]}
+                                className="mySwiper"
+                            >
+                                {makeMoreDesign()}
+                            </Swiper>
+ */}
+
+
+ ////
+
+ 
+
+ /*    const makeMoreDesign = () => {
+        // design 객체 내부의 배열에 접근합니다.
+        const designArrays = Object.values(pData.design);
+    
+        // 각 배열을 순회하고 각 디자인 이미지에 대한 HTML을 생성합니다.
+        return designArrays.map((array, index) => (
+            <div className="design__box" key={index}>
+                <div className="design__image">
+                    {array.map((v, i) => (
+                        <div className="design__item" key={`${index}-${i}`}>
+                            <a href={v.isrc} target="_blank">
+                                <img src={v.isrc} alt={v.title} />
+                            </a>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        ));
+    }; */
+
+
