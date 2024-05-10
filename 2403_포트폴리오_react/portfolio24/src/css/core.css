@@ -61,26 +61,22 @@ button:hover {
 /* 런드리 볼드- TTLaundryGothicB */
 @font-face {
   font-family: 'TTLaundryGothicB';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
+  src: url(../static/fonts/LaundryGothicBold.woff) format("woff");
+
 
 }
+
+
+
+
 /* 강원교육튼튼체 */
 @font-face {
   font-family: 'GangwonEduPowerExtraBoldA';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  src: url(../static/fonts/GangwonEduPower.woff) format("woff");
+
 }
 
-/* MBC 1961 굴림 */
-@font-face {
-  font-family: 'MBC1961GulimM';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 /* 프리텐다드 - url : "Pretendard Variable" */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");

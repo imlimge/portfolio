@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import $ from "jquery";
 window.jQuery = $;
 
-
 export function Intro() {
     const [inputText, setInputText] = useState(""); // 입력한 텍스트 상태
 
@@ -23,49 +22,67 @@ export function Intro() {
     useEffect(() => {
         // 모든 .text__item 숨기기
         $(".text__item-list").find(".text__item").hide();
-    
+
         // 스크롤 내리기
-        const introContentText = document.querySelector('.intro__content-text');
-    
+        const introContentText = document.querySelector(".intro__content-text");
+
         // 각 .text__item에 대한 처리
-        $(".text__item-list").find(".text__item").each(function (index) {
-            // 현재 요소를 저장
-            const currentItem = $(this);
-    
-            // 1초 간격으로 순차적으로 표시하기
-            currentItem.delay(1000 * index).show(400, function() {
-                // 애니메이션 완료 후 부드럽게 스크롤 내리기
-                smoothScrollTo(introContentText, introContentText.scrollHeight, 2000);
-    
-                // 마지막 메시지가 표시된 경우에만 부드럽게 스크롤 내리기
-                if (index === $(".text__item-list .text__item").length - 1) {
-                    setTimeout(() => {
-                        smoothScrollTo(introContentText, introContentText.scrollHeight, 1000);
-                    }, 1000);
-                }
+        $(".text__item-list")
+            .find(".text__item")
+            .each(function (index) {
+                // 현재 요소를 저장
+                const currentItem = $(this);
+
+                // 1초 간격으로 순차적으로 표시하기
+                currentItem.delay(1000 * index).show(400, function () {
+                    // 애니메이션 완료 후 부드럽게 스크롤 내리기
+                    smoothScrollTo(
+                        introContentText,
+                        introContentText.scrollHeight,
+                        2000
+                    );
+
+                    // 마지막 메시지가 표시된 경우에만 부드럽게 스크롤 내리기
+                    if (
+                        index ===
+                        $(".text__item-list .text__item").length - 1
+                    ) {
+                        setTimeout(() => {
+                            smoothScrollTo(
+                                introContentText,
+                                introContentText.scrollHeight,
+                                1000
+                            );
+                        }, 1000);
+                    }
+                });
             });
-        });
     }, []);
-    
+
     // 부드러운 스크롤 함수
     function smoothScrollTo(element, to, duration) {
         const start = element.scrollTop;
         const change = to - start;
         let currentTime = 0;
         const increment = 20;
-    
+
         function animateScroll() {
             currentTime += increment;
-            const val = Math.easeInOutQuad(currentTime, start, change, duration);
+            const val = Math.easeInOutQuad(
+                currentTime,
+                start,
+                change,
+                duration
+            );
             element.scrollTop = val;
             if (currentTime < duration) {
                 requestAnimationFrame(animateScroll);
             }
         }
-        
+
         animateScroll();
     }
-    
+
     // 이징 함수
     Math.easeInOutQuad = function (t, b, c, d) {
         t /= d / 2;
@@ -74,16 +91,15 @@ export function Intro() {
         return (-c / 2) * (t * (t - 2) - 1) + b;
     };
 
-
-     //새 메세지 추가 때마다 인트로 채팅창 스크롤 항상 아래로 내리기
-     useEffect(() => {
-
-        $(".intro__content-text").animate({
-            scrollTop: $(".intro__content-text")[0].scrollHeight
-        }, 400);
-
-    },[newMessages]);
-
+    //새 메세지 추가 때마다 인트로 채팅창 스크롤 항상 아래로 내리기
+    useEffect(() => {
+        $(".intro__content-text").animate(
+            {
+                scrollTop: $(".intro__content-text")[0].scrollHeight,
+            },
+            400
+        );
+    }, [newMessages]);
 
     // 새로운 메시지를 추가하는 함수
     const addNewMessage = (message) => {
@@ -152,11 +168,6 @@ export function Intro() {
     const hours = currentDate.getHours();
     const minutes = currentDate.getMinutes();
     const seconds = currentDate.getSeconds();
-
-   
-
-
-
 
     return (
         <>
@@ -245,7 +256,9 @@ export function Intro() {
                             <h4>웹 개발자</h4>
                             <h2>임경은</h2>
                             <div>github</div>
-                            <span>https://github.com/imlimge</span>
+                            <a href="https://github.com/imlimge" target="blank">
+                                <span>https://github.com/imlimge</span>
+                            </a>
                             <div>mail</div>
                             <span>limge12@gmail.com</span>
                         </div>

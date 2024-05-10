@@ -10,9 +10,9 @@ window.jQuery = $;
 
 
 
-export function MainArea({sts}) {
+export function MainArea() {
 
-    
+
 
 
 useEffect(()=>{
