@@ -3,13 +3,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
 
+
+import { chat } from "../data/chat.js";
+
 import $ from "jquery";
 window.jQuery = $;
+
+
 
 export function Intro() {
     const [inputText, setInputText] = useState(""); // 입력한 텍스트 상태
 
     const [newMessages, setNewMessages] = useState([]); // 새로운 메시지 상태
+
+    const [reMessages, setReMessages] = useState([]); // 대답 메시지 상태
+
+
+    useEffect(()=>{
+        console.log(chat)
+        
+    },[])
+
+
 
     // input 창에 포커스를 주기 위한 ref
     const inputRef = useRef(null);
@@ -253,14 +268,22 @@ export function Intro() {
                     {/* 인트로 내용 */}
                     <div className="intro__content">
                         <div className="intro__content-me">
-                            <h4>웹 개발자</h4>
-                            <h2>임경은</h2>
-                            <div>github</div>
-                            <a href="https://github.com/imlimge" target="blank">
-                                <span>https://github.com/imlimge</span>
-                            </a>
-                            <div>mail</div>
-                            <span>limge12@gmail.com</span>
+                            <div className="name">
+                                <h4>웹 개발자</h4>
+                                <h2>임경은</h2>
+                            </div>
+                            <div className="info">
+                                <div>
+                                    <div className="black-box">github</div>
+                                    <a href="https://github.com/imlimge" target="blank">
+                                        <span>https://github.com/imlimge</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <div className="black-box">mail</div>
+                                    <span>limge12@gmail.com</span>
+                                </div>
+                           </div>
                         </div>
 
                         {/* 가운데 흘러가는 글자 */}
@@ -293,7 +316,7 @@ export function Intro() {
                                 </div>
                             </div>
                             <div className="text__item-list add">
-                                {/* 새로운 메시지들을 순차적으로 보여줍니다. */}
+                                {/* 새로운 메시지 순차 출력. */}
                                 {newMessages.map((message) => (
                                     <div
                                         key={message.id}

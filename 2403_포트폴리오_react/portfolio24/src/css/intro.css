@@ -260,7 +260,7 @@ background-color: var(--color-02);
     margin-bottom: 3rem;
   }
   
-  .intro__content-me div{
+  .black-box{
     margin-bottom: 4px;
     font-weight: bold;
     font-size: 1.1rem;
@@ -446,13 +446,17 @@ input:focus {outline:none;}
 
 
 
+/* 높이 */
+@media screen and (max-height:750px) {
 
+  
+}
 
 /* 타블렛 */
 @media screen and (max-width:1023px) {
 
-  
 }
+
 
 /* 모바일 */
 @media screen and (max-width:600px) {
