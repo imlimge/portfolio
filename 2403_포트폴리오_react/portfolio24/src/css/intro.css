@@ -18,7 +18,7 @@
  width: 100%;
   height: 100vh;
   background-color: var(--color-02);
-  z-index: 99;
+  z-index: 5;
   mix-blend-mode: multiply;
 }
 
@@ -47,10 +47,65 @@
     opacity: 0.5;
   }
 
+  /* 인트로에 메뉴로 이동하는 버튼 */
+.intro__button{
+  z-index: 10;
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background-color: var(--black);
+  border-radius: 30px;
+  right: -72px;
+  top: 10vh;
+  display: flex;
+  align-items: center;
+  cursor: url("../../public/images/cursor_hover.png"), auto;
+  transition: .5s;
 
+}
+
+
+
+.intro__button:hover{
+  right: -30px;
+
+}
+
+
+.intro__button span{
+
+    color: var(--color-05);
+    font-size: 1.5rem !important;
+    margin-left: 30px;
+    margin-bottom:0 !important;
+ 
+}
+.intro__button span:nth-child(2){
+
+    margin-left: 30px;
+    transition: .8s;
+}
+.intro__button:hover span:nth-child(2){
+  margin-left: 15px;
+ 
+
+}
+
+/* 내소개 버튼 오른쪽 붙어있는 위치 조정 */
+.intro__button.me{
+  right: -100px;
+
+}
+.intro__button.me:hover {
+  right: -50px;
+
+}
+
+
+/* 인트로 왼쪽 박스 : 이미지 */
 .intro__img{
   border-right: var(--stroke);
-  flex: 1.5;
+  flex: 1.2;
   
   display: flex;
   justify-content: center;
@@ -93,37 +148,14 @@ transform-origin: right;
   animation: head-ani 1s ease infinite alternate ;
  }
 
+
 /* 조명 */
-.intro__img img:last-child{
+.intro__img img:nth-child(14){
   opacity: .5;
   filter: blur(1px);
   animation: blur-effect 2s ease infinite alternate ;
  }
 
-
- /* .intro__img 마우스 오버 시 동작 */
-.intro__img:hover img:nth-child(4) {
-  /* 이미지 소스 변경 */
-  content: url('../../public/images/intro_pc_hover.png');
-}
- /* .intro__img 마우스 오버 시 동작 */
-.intro__img:hover img:nth-child(10) {
-  /* 이미지 소스 변경 */
-  content: url('../../public/images/intro_eye_hover.png');
-}
- /* .intro__img 마우스 오버 시 동작 */
-.intro__img:hover img:nth-child(11) {
-  /* 이미지 소스 변경 */
-  content: url('../../public/images/intro_mouse_hover.png');
-}
-
-.intro__img:hover img {
-  animation-play-state: paused;
-}
-
-.intro__img:hover .cover{
-  background-color: #fff;
-}
 
 
 
@@ -138,7 +170,7 @@ transform-origin: right;
 .intro-calendar {
   position: absolute;
   top: 12vh;
-  left: 7vw;
+  left: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -228,7 +260,7 @@ transform-origin: right;
 
 }
 
-
+/* 인트로 오른쪽 박스 : 내용 */
 .intro__content{
     flex: 1;
 
@@ -259,24 +291,78 @@ background-color: var(--color-02);
     font-size: 4rem;
     margin-bottom: 3rem;
   }
+
   
+  .intro__content-me span{
+    margin-bottom: 1rem;
+    display: inline-block;
+    font-size: 1.2rem;
+   }
+
+  .info__wrap{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  
+  .history{
+
+  }
+
+.mail{
+  display: flex;
+  flex-wrap: wrap;
+}
+.mail__item{
+  padding: .5rem 2rem 0 0;
+  
+}
+
+.intro__content-me .history span{
+    font-size: 13px !important;
+    font-weight: 800;
+    display: block;
+  }
+
+
+  .history span::before{
+    content: '● ';
+    font-size: 6px;
+    position: relative;
+    left: -1px;
+    top: -2px;
+  }
+
+  /* 소제목 검은 박스 : github,mail */
   .black-box{
     margin-bottom: 4px;
-    font-weight: bold;
-    font-size: 1.1rem;
+    /* font-weight: bold; */
+    font-size: 1rem;
     background-color: var(--black);
     color: #fff;
     width: fit-content;
     padding: 0.5rem;
     border-radius: 0.8rem;
    }
-  
-  .intro__content-me span{
-   margin-bottom: 1rem;
-   display: inline-block;
-   font-size: 1.3rem;
+   .mail__item{
+    display: flex;
+   }
+
+  .intro__content-me .mail__item span{
+    margin-bottom: 0;
+    top: 5px;
+    position: relative;
+    margin-left: 5px;
   }
 
+
+
+
+
+
+
+  /* 흘러가는 글자 박스 */
 .intro__content-hello{
   height: 33px;
     
@@ -305,10 +391,11 @@ background-color: var(--color-02);
 }
 
 
-
+/* 채팅창 */
 .intro__content-text{
  position: relative;
- flex-grow: 1;
+ flex-grow: 0;
+ flex: 1;
  overflow: auto;
  background-color: var(--color-03);
 }
@@ -465,6 +552,11 @@ input:focus {outline:none;}
     /* display: none; */
   }
 
+  .intro__button{
+    display: none;
+  }
+
+  
   .intro {
     flex-direction: column;
     height: 100%;
@@ -531,5 +623,10 @@ input:focus {outline:none;}
   padding: 0 1rem;
 
 }
+
+.history{
+  padding: 1.2rem 0;
+}
+
 }
 

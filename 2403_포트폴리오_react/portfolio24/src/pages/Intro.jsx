@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useRef, useState } from "react";
 
+import { Link } from "react-router-dom";
 
 import { chat } from "../data/chat.js";
 
@@ -25,6 +26,34 @@ export function Intro() {
     },[])
 
 
+    // 인트로 포트폴리오 버튼 호버시 CSS 변경
+    $(".intro__button.port").hover(function() {
+        // 호버 시작 시 이미지 속성 변경
+        $(".intro__img img:nth-child(4)").attr("src", "./images/intro_pc_hover.png");
+        $(".intro__img img:nth-child(10)").attr("src", "./images/intro_eye_hover.png");
+        $(".intro__img img:nth-child(11)").attr("src", "./images/intro_mouse_hover.png");
+        $(".intro__img img").css("animation-play-state", "paused");
+        $(".intro__img .cover").css("background-color", "#fff");
+    }, function() {
+        // 호버 종료 시 이미지 속성 초기화
+        $(".intro__img img:nth-child(4)").attr("src", "./images/intro_pc.gif");
+        $(".intro__img img:nth-child(10)").attr("src", "./images/intro_eye2.png");
+        $(".intro__img img:nth-child(11)").attr("src", "./images/intro_mouse2.png");
+        $(".intro__img img").css("animation-play-state", "running");
+        $(".intro__img .cover").css("background-color", "var(--color-02)");
+    });
+    
+
+      // 인트로 내소개 버튼 호버시 CSS 변경
+      $(".intro__button.me").hover(function() {
+        // 호버 시작 시 이미지 속성 변경
+        $(".hello__item").css("animation-play-state", "paused");
+    }, function() {
+        // 호버 종료 시 이미지 속성 초기화
+        $(".hello__item").css("animation-play-state", "running");
+    });
+    
+
 
     // input 창에 포커스를 주기 위한 ref
     const inputRef = useRef(null);
@@ -32,7 +61,7 @@ export function Intro() {
     // 컴포넌트가 마운트될 때 input 창에 포커스
     useEffect(() => {
         inputRef.current.focus();
-    }, []);
+    });
 
     useEffect(() => {
         // 모든 .text__item 숨기기
@@ -54,7 +83,7 @@ export function Intro() {
                     smoothScrollTo(
                         introContentText,
                         introContentText.scrollHeight,
-                        2000
+                        3000
                     );
 
                     // 마지막 메시지가 표시된 경우에만 부드럽게 스크롤 내리기
@@ -66,7 +95,7 @@ export function Intro() {
                             smoothScrollTo(
                                 introContentText,
                                 introContentText.scrollHeight,
-                                1000
+                                200
                             );
                         }, 1000);
                     }
@@ -160,20 +189,20 @@ export function Intro() {
         setCurrentDate(new Date());
     }
 
-    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    const days = ["일", "월", "화", "수", "목", "금", "토"];
     const months = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
+        "1월",
+        "2월",
+        "3월",
+        "4월",
+        "5월",
+        "6월",
+        "7월",
+        "8월",
+        "9월",
+        "10월",
+        "11월",
+        "12월",
     ];
 
     const year = currentDate.getFullYear();
@@ -189,12 +218,13 @@ export function Intro() {
             {/* 메인 인트로 */}
             <section id="intro">
                 <div className="intro">
-                    {/* 인트로 이미지 */}
+                    {/* 인트로 왼쪽 박스 : 이미지 */}
                     <div className="intro__img">
                         <div className="cover"></div>
                         <div className="opening">
                             <span>Hello!</span>
                         </div>
+                      
 
                         <img
                             src="./images/intro_back.png"
@@ -263,27 +293,60 @@ export function Intro() {
                             src="./images/intro_light2.png"
                             alt="인트로 이미지"
                         />
+
+                          {/* 버튼 */}
+                          <Link to="portfolio">
+                          <div className="intro__button port">
+                            <div className="button__box">
+                                <span>포트폴리오</span>
+                                <span>＞</span>
+                            </div>
+
+                        </div></Link>
+                        
+
                     </div>
 
-                    {/* 인트로 내용 */}
+                    {/* 인트로 오른쪽 박스 : 내용 */}
                     <div className="intro__content">
                         <div className="intro__content-me">
                             <div className="name">
                                 <h4>웹 개발자</h4>
                                 <h2>임경은</h2>
                             </div>
-                            <div className="info">
-                                <div>
+
+                            <div className="info__wrap">
+                            <div className="history">
+                            <span>그린컴퓨터 아카데미 (프론트엔드(React, PHP), 플러터(Flutter)활용 웹&앱개발) </span>
+                            <span>건국대학교(커뮤니케이션 디자인)</span>
+                            <span>북원여자고등학교 (산업디자인과)</span>
+                           </div>
+                            <div className="mail">
+                                <div className="mail__item">
                                     <div className="black-box">github</div>
                                     <a href="https://github.com/imlimge" target="blank">
                                         <span>https://github.com/imlimge</span>
                                     </a>
                                 </div>
-                                <div>
+                                <div className="mail__item">
                                     <div className="black-box">mail</div>
                                     <span>limge12@gmail.com</span>
                                 </div>
                            </div>
+                          
+                           </div>
+
+                                 {/* 버튼 */}
+                        
+                                 <Link to="about">
+                          <div className="intro__button me">
+                            <div className="button__box">
+                                <span>내소개</span>
+                                <span>＞</span>
+                            </div>
+
+                        </div> </Link>
+                        
                         </div>
 
                         {/* 가운데 흘러가는 글자 */}
@@ -295,7 +358,7 @@ export function Intro() {
                             </div>
                         </div>
 
-                        {/* 채팅모양 인삿말 */}
+                        {/* 채팅창 */}
                         <div className="intro__content-text">
                             <div className="text__item-list">
                                 {/* 상단 채팅대화창  */}
@@ -304,14 +367,17 @@ export function Intro() {
                                 </div>
                                 <div className="text__item">
                                     <p>
-                                        새로운 것을 좋아하고 배우는 것을
-                                        좋아하는 신입 웹 개발자 임경은입니다.
+                                        디자인도 하고
                                     </p>
                                 </div>
                                 <div className="text__item">
                                     <p>
-                                        소통을 중요하게 생각하고 함께 일하는
-                                        것이 편한 개발자가 되고 싶습니다.
+                                       개발도 하는
+                                    </p>
+                                </div>
+                                <div className="text__item">
+                                    <p>
+                                       디발자 임경은입니다!
                                     </p>
                                 </div>
                             </div>
@@ -337,7 +403,7 @@ export function Intro() {
                                 value={inputText}
                                 onChange={handleInputChange}
                                 onKeyPress={handleKeyPress}
-                                placeholder="문구를 입력하세요"
+                                placeholder=""
                             />
                             <div className="send" onClick={handleSendClick}>
                                 <FontAwesomeIcon

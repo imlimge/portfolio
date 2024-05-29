@@ -5,7 +5,11 @@ import $ from "jquery";
 window.jQuery = $;
 
 
-export function About(props) {
+export function About() {
+
+
+
+
 
 
   return (
@@ -52,30 +56,21 @@ export function About(props) {
                                 <span>학력</span>
                             </div>
                         </div>
-                        <div className="about__item">
-                            <div className="about__item-content">
-                                <span
-                                    >중개자, 사람과 사람 사이의 갈등 해결,
-                                    새로운 거 배우기 좋아함</span>
-                            </div>
-                            <div className="about__item-name">
-                                <span>성향</span>
-                            </div>
-                        </div>
+
                         <div className="about__item">
                             <div className="about__item-content stxt">
-                                <span>Just keep swimming</span>
-                                <span>-니모를 찾아서</span>
+                                <span>프론트엔드(React, PHP), 플러터(Flutter)활용 웹&앱개발 양성과정</span>
+                                <span>2023.07 – 2024.01 (6개월, 952시간)  </span>
                             </div>
                             <div className="about__item-name">
-                                <span>좋아하는 문구</span>
+                                <span>교육</span>
                             </div>
                         </div>
 
                         <div className="about__item">
                             <div className="about__item-content">
                                 <p>안녕하세요. <br />
-                                    웹 개발자로 계속 발전하고 싶은 임경은입니다. <br /><br />
+                                    더 많은 것을 배워가며 웹과 앱을 잘 구현하고 싶은 임경은입니다. <br /><br />
                                  
                                     우연히 웹 사이트를 제작하게 되었는데
                                     사람과 상호작용하는 웹 화면을 구현하는 것에 
@@ -187,9 +182,7 @@ export function About(props) {
                                     <span>
                                        디자인 경험을 통해 디자이너와 원활히 소통합니다
                                     </span>
-                                    <span>
-                                       의견이 다르다면 서로 소통하여 최선을 결과를 위해 노력합니다
-                                    </span>
+                               
                                     
                                 </div>
                                 </div>

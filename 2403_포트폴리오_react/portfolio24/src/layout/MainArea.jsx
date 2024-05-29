@@ -1,16 +1,18 @@
 
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, Outlet,useParams,useNavigate } from "react-router-dom";
 import { useEffect} from "react";
 
 
 import $ from "jquery";
+import { faHouse, faLightbulb } from "@fortawesome/free-solid-svg-icons";
 window.jQuery = $;
 
 
 
 
 export function MainArea() {
+
 
 
 
@@ -137,16 +139,21 @@ $(window).on("resize", function() {
             <div className="header__wrap">
                 {/* <!-- 상단 정보바 --> */}
                 <div className="header__info">
-                    <a href="index.html">
+                <Link to="/">
+           <div className="header__home">
+         
+                 </div> 
+                  </Link>
+                   
                         <div className="header__logo">
                             <img src="./images/logo.png" alt="상단 로고" />
                         </div>
-                    </a>
-                    <div className="header__title">
-                        <Link to="/"><span>main,</span></Link>
+                   
+                    {/* <div className="header__title">
+                       
                         <Link to="about"><span>about,</span></Link>
                         <Link to="portfolio"><span>portfolio</span></Link>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* <!-- 오른쪽 메뉴 햄버거 버튼 --> */}
