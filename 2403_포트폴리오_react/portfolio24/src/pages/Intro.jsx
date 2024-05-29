@@ -33,7 +33,7 @@ export function Intro() {
         $(".intro__img img:nth-child(10)").attr("src", "./images/intro_eye_hover.png");
         $(".intro__img img:nth-child(11)").attr("src", "./images/intro_mouse_hover.png");
         $(".intro__img img").css("animation-play-state", "paused");
-        $(".intro__img .cover").css("background-color", "#fff");
+        $(".intro__img .cover").css("background-color", "var(--color-12)");
     }, function() {
         // 호버 종료 시 이미지 속성 초기화
         $(".intro__img img:nth-child(4)").attr("src", "./images/intro_pc.gif");
@@ -78,7 +78,7 @@ export function Intro() {
                 const currentItem = $(this);
 
                 // 1초 간격으로 순차적으로 표시하기
-                currentItem.delay(1000 * index).show(400, function () {
+                currentItem.delay(1000 * index).show(300, function () {
                     // 애니메이션 완료 후 부드럽게 스크롤 내리기
                     smoothScrollTo(
                         introContentText,
@@ -377,7 +377,7 @@ export function Intro() {
                                 </div>
                                 <div className="text__item">
                                     <p>
-                                       디발자 임경은입니다!
+                                       디발자 임경은입니다😊
                                     </p>
                                 </div>
                             </div>

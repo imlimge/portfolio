@@ -30,7 +30,7 @@ burger.on('click', function(e){
 });
 
 // 햄버거 메뉴의 각 항목을 클릭할 때 메뉴 닫음
-$(".menu-list__item").on("click", function() {
+$(".item__wrap").on("click", function() {
   // 햄버거 메뉴가 열려 있는 경우에만 동작
   if ($(".header__nav-menu").hasClass("on")) {
     // 햄버거 메뉴 닫기
@@ -71,7 +71,7 @@ $(".header__title span").on("click", function() {
       // 섹션 높이 설정
       $(".header__nav-menu").css("height", "0");
      
-      $('.menu-list__item').click()
+      $('.item__wrap').click()
 
     }
     
@@ -168,16 +168,22 @@ $(window).on("resize", function() {
                 {/* <!-- 메뉴 네비게이션 --> */}
                 <nav className="header__nav-menu">
                     <ul className="menu-list">
+                      
                         <li>
+                          <Link to="/">
+                          <div className="item__wrap">
                             <div className="menu-list__item">
-                                <Link to="/">메인</Link>
-                                <span>main</span>
+                                메인
+                                <span>main</span></div>
                             </div>
+
+                            </Link>
                         </li>
 
-                        <li>
+                        <li> <Link to="about">
+                        <div className="item__wrap">
                            <div className="menu-list__item">
-                                <Link to="about">자기소개</Link>
+                               자기소개
                                 <span>about</span>
                             </div>
                             <ul className="sub-list">
@@ -185,11 +191,13 @@ $(window).on("resize", function() {
                                    내 소개 & 업무 스킬
                                 </li>
                             </ul>
+                            </div></Link>
                         </li>
 
-                        <li>
+                        <li><Link to="portfolio">
+                        <div className="item__wrap">
                             <div className="menu-list__item">
-                                <Link to="portfolio">포트폴리오</Link>
+                                포트폴리오
                                 <span>portfolio</span>
                             </div>
                             <ul className="sub-list">
@@ -202,7 +210,7 @@ $(window).on("resize", function() {
                                 <li>
                                     디자인
                                 </li>
-                            </ul>
+                            </ul></div></Link>
                         </li>
                     </ul>
                 </nav>

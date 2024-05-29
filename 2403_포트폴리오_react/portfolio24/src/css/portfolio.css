@@ -308,7 +308,7 @@ box-shadow: 2px 2px 8px #000;
   .view__btn{
     position: absolute;
     /* bottom: 70px; */
-    top: 12vh;
+    top: 14vh;
     margin: 2rem;
     border: 2px solid #fff;
     background-color: transparent;

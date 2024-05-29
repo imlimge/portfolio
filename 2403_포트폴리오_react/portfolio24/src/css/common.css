@@ -196,17 +196,21 @@ animation: open-ani 2s ease forwards;
  }
 
  .menu-list a{
-  display: inline-block;
+  display: block;
  }
  
  .menu-list>li{
   font-size: 2rem;
+  position: relative;
+
+ 
+  border-bottom: var(--stroke);
+ }
+.item__wrap{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: var(--stroke);
- }
-
+}
  .menu-list>li:hover{
 background-color: var(--under-color);
 cursor: url("../../public/images/cursor_hover.png"), auto;

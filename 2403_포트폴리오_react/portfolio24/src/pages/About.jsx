@@ -49,8 +49,11 @@ export function About() {
                         <div className="about__item">
                             <div className="about__item-content">
                                 <span
-                                    >건국대학교(서울캠퍼스) 커뮤니케이션 디자인
+                                    >건국대학교(서울캠퍼스) - 커뮤니케이션 디자인 
                                     (14.졸업)</span>
+                                <span
+                                    >북원여자 고등학교 -  산업디자인
+                                    (08.졸업)</span>
                             </div>
                             <div className="about__item-name">
                                 <span>학력</span>
@@ -60,7 +63,7 @@ export function About() {
                         <div className="about__item">
                             <div className="about__item-content stxt">
                                 <span>프론트엔드(React, PHP), 플러터(Flutter)활용 웹&앱개발 양성과정</span>
-                                <span>2023.07 – 2024.01 (6개월, 952시간)  </span>
+                                <span>2023.07 – 2024.01 (6개월, 952시간)  / 그린아카데미 (역삼)</span>
                             </div>
                             <div className="about__item-name">
                                 <span>교육</span>

@@ -73,7 +73,7 @@
 
 
 .intro__button span{
-
+    font-family: var(--font-title-bold);
     color: var(--color-05);
     font-size: 1.5rem !important;
     margin-left: 30px;
@@ -392,6 +392,7 @@ background-color: var(--color-02);
 
 
 /* 채팅창 */
+
 .intro__content-text{
  position: relative;
  flex-grow: 0;
@@ -402,55 +403,65 @@ background-color: var(--color-02);
 
 
 
-.intro__content-text p{
+/* .intro__content-text p{
   font-size: 1.4rem;
   line-height: 2.4rem;
   font-family: "Pretendard Variable";
   top: -12px;
   position: relative;
-}
+} */
 
 .text__item-list{
    padding: 2rem;
    margin-bottom: -55.7px;
+   display: flex;
+   flex-direction: column;
+
 }
 
 .text__item-list.add {
   margin-bottom: 80px;
 
-  display: flex;
-    flex-direction: column;
+  /* display: flex;
+    flex-direction: column; */
     align-items: flex-end;
 }
 
 .text__item{
-  border: 2px solid var(--black);
-  margin: 10px 0;
-  padding: 2px 8px;
+  margin: 8px 0;
+  padding: 5px 8px;
+  
   border-radius: 14px;
+  
+  border: 2px solid var(--black);
   background-color: var(--black);
   color: #fff;
   width: fit-content;
+  position: relative;
 }
 
+.text__item p{
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-family: "Pretendard Variable";
+ 
+  position: relative;
+}
 
 .text__item::before {
   content: "◀";
-  left: -16px;
+  left: -10px;
   color: var(--black);
-  position: relative;
+  position: absolute;
  
 }
 .text__item.right{
   border: 2px solid var(--color-02);
-  margin: 8px 0;
-  padding: 5px 8px;
 
   background-color: var(--color-02);
   color: var(--black);
-  width: fit-content;
+ 
 
-  position: relative;
 
 }
 
