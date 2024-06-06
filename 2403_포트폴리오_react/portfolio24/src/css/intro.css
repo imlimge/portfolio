@@ -123,34 +123,39 @@
 }
 
 
+/* 고양이 */
+.intro__img img:nth-child(4){
+  transform-origin: bottom;
+animation: cat-ani 3s ease-in-out infinite alternate ;
+ }
 /* 다리 */
-.intro__img img:nth-child(5){
+.intro__img img:nth-child(6){
 animation: leg-ani 1s ease-in-out infinite alternate ;
  }
 
 /* 왼쪽팔 */
-.intro__img img:nth-child(6){
+.intro__img img:nth-child(7){
 animation: arm-ani .5s ease infinite;
 transform-origin: right;
 
  }
 /* 오른쪽팔 */
-.intro__img img:nth-child(7){
+.intro__img img:nth-child(8){
   animation: arm-ani .5s ease infinite .4s;
  }
 /* 머리 */
-.intro__img img:nth-child(9){
+.intro__img img:nth-child(10){
 
   animation: head-ani 1s ease infinite alternate ;
  }
 /* 눈 */
-.intro__img img:nth-child(10){
+.intro__img img:nth-child(11){
   animation: head-ani 1s ease infinite alternate ;
  }
 
 
 /* 조명 */
-.intro__img img:nth-child(14){
+.intro__img img:nth-child(15){
   opacity: .5;
   filter: blur(1px);
   animation: blur-effect 2s ease infinite alternate ;
@@ -179,21 +184,19 @@ transform-origin: right;
 
 }
 .date{
-  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   transform: skew(0deg, -2deg) scale(0.9);
   margin-left: 4px;
-  padding: 1rem;
-  margin-top: 8px;
+  margin-top: 13.5px;
 }
 
 .date-top{
   display: flex;
-  flex-direction: row;
- 
+  flex-direction: column;
+  align-items: center;
 }
 
 .date-top span{
@@ -211,6 +214,14 @@ transform-origin: right;
   font-weight: 900;
 }
 
+.year-dw{
+display: flex;
+flex-direction: row;
+}
+
+.year-dw span {
+  font-size: 1.3vw;
+}
 
 .intro-calendar img {
   margin-top: 0;

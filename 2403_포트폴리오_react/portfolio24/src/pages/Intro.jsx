@@ -29,16 +29,16 @@ export function Intro() {
     // 인트로 포트폴리오 버튼 호버시 CSS 변경
     $(".intro__button.port").hover(function() {
         // 호버 시작 시 이미지 속성 변경
-        $(".intro__img img:nth-child(4)").attr("src", "./images/intro_pc_hover.png");
-        $(".intro__img img:nth-child(10)").attr("src", "./images/intro_eye_hover.png");
-        $(".intro__img img:nth-child(11)").attr("src", "./images/intro_mouse_hover.png");
+        $(".intro__img img:nth-child(5)").attr("src", "./images/intro_pc_hover.png");
+        $(".intro__img img:nth-child(11)").attr("src", "./images/intro_eye_hover.png");
+        $(".intro__img img:nth-child(12)").attr("src", "./images/intro_mouse_hover.png");
         $(".intro__img img").css("animation-play-state", "paused");
         $(".intro__img .cover").css("background-color", "var(--color-12)");
     }, function() {
         // 호버 종료 시 이미지 속성 초기화
-        $(".intro__img img:nth-child(4)").attr("src", "./images/intro_pc.gif");
-        $(".intro__img img:nth-child(10)").attr("src", "./images/intro_eye2.png");
-        $(".intro__img img:nth-child(11)").attr("src", "./images/intro_mouse2.png");
+        $(".intro__img img:nth-child(5)").attr("src", "./images/intro_pc.gif");
+        $(".intro__img img:nth-child(11)").attr("src", "./images/intro_eye2.png");
+        $(".intro__img img:nth-child(12)").attr("src", "./images/intro_mouse2.png");
         $(".intro__img img").css("animation-play-state", "running");
         $(".intro__img .cover").css("background-color", "var(--color-02)");
     });
@@ -230,6 +230,10 @@ export function Intro() {
                             src="./images/intro_back.png"
                             alt="인트로 이미지"
                         />
+                        <img
+                            src="./images/intro_cat.png"
+                            alt="인트로 이미지"
+                        />
                         <img src="./images/intro_pc.gif" alt="인트로 이미지" />
 
                         <img
@@ -270,10 +274,13 @@ export function Intro() {
 
                             <div className="date">
                                 <div className="date-top">
+                                <div className="year-dw">
                                     <span>{year}</span>
-                                    <span>({dayOfWeek})</span>
-                                    <span>{month}</span>
+                                                                        <span>{month}</span>
                                 </div>
+                                    <span>({dayOfWeek})</span>
+                                </div>
+
                                 <span>{date}</span>
                             </div>
                         </div>
@@ -311,7 +318,7 @@ export function Intro() {
                     <div className="intro__content">
                         <div className="intro__content-me">
                             <div className="name">
-                                <h4>웹 개발자</h4>
+                                <h4>웹 퍼블리셔</h4>
                                 <h2>임경은</h2>
                             </div>
 
